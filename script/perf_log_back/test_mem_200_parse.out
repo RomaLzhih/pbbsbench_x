@@ -1,0 +1,648 @@
+--------------------------------------------------------------------------------
+Command:            ./../build/test -p /localdata/zmen002/kdtree/ss_varden/20000000_3/1.in -d 3 -k 10 -t 0 -q 0 -i 0
+Massif arguments:   --time-unit=B --massif-out-file=perf_log/test_mem_200.out
+ms_print arguments: perf_log/test_mem_200.out
+--------------------------------------------------------------------------------
+
+
+    GB
+6.916^                                    :                                   
+     |                                  :#::                                  
+     |                                :::#: :::                               
+     |                               ::::#: :                                 
+     |                               ::::#: :  :::                            
+     |                               ::::#: :  :  ::                          
+     |                               ::::#: :  :  : @@@@@@@@@@@@@@@@@@@@@     
+     |                               ::::#: :  :  : @                         
+     |                               ::::#: :  :  : @                         
+     |                               ::::#: :  :  : @                         
+     |                               ::::#: :  :  : @                         
+     |                               ::::#: :  :  : @                         
+     |                               ::::#: :  :  : @                         
+     |                               ::::#: :  :  : @                         
+     |                               ::::#: :  :  : @                         
+     |          :::::::::::::::::::::::::#: :  :  : @                         
+     |       ::::                    ::::#: :  :  : @                         
+     |       :  :                    ::::#: :  :  : @                         
+     |     :::  :                    ::::#: :  :  : @                    ::   
+     |  :::: :  :                    ::::#: :  :  : @                    :::: 
+   0 +----------------------------------------------------------------------->GB
+     0                                                                   13.84
+
+Number of snapshots: 84
+ Detailed snapshots: [26 (peak), 32, 53, 63, 73, 83]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        605,272          602,520          600,689         1,831            0
+  2    537,476,272      537,473,520      537,471,601         1,919            0
+  3    537,484,976      537,464,816      537,462,921         1,895            0
+  4  1,074,355,976    1,074,335,816    1,074,333,833         1,983            0
+  5  1,078,812,656    1,078,792,496    1,078,790,305         2,191            0
+  6  1,615,683,656    1,615,663,496    1,615,661,217         2,279            0
+  7  1,615,683,712    1,615,663,552    1,615,661,241         2,311            0
+  8  2,152,554,712    2,152,534,552    2,152,532,153         2,399            0
+  9  2,152,554,824    2,152,534,664    2,152,532,201         2,463            0
+ 10  6,447,522,208    6,447,502,048    6,447,499,497         2,551            0
+ 11  6,505,554,336    6,505,528,720    6,505,504,489        24,231            0
+ 12  6,562,726,888    6,562,701,272    6,562,656,801        44,471            0
+ 13  6,605,738,488    6,605,712,872    6,605,652,081        60,791            0
+ 14  6,662,124,288    6,662,098,672    6,662,017,921        80,751            0
+ 15  6,725,854,336    6,725,828,720    6,725,724,361       104,359            0
+ 16  6,778,044,968    6,778,019,352    6,777,895,481       123,871            0
+ 17  6,812,663,352    6,812,637,736    6,812,501,433       136,303            0
+ 18  6,864,067,144    6,864,041,528    6,863,886,121       155,407            0
+ 19  6,940,909,208    6,940,883,592    6,940,700,849       182,743            0
+ 20  6,993,099,768    6,993,074,152    6,992,872,009       202,143            0
+ 21  7,045,028,072    7,045,002,456    7,044,780,969       221,487            0
+ 22  7,121,608,048    7,121,582,432    7,121,333,553       248,879            0
+ 23  7,165,668,472    7,165,642,856    7,165,377,529       265,327            0
+ 24  7,243,036,336    7,243,010,720    7,242,716,601       294,119            0
+ 25  7,320,928,384    7,320,902,768    7,320,580,049       322,719            0
+ 26  7,372,331,816    7,372,306,200    7,371,964,801       341,399            0
+100.00% (7,371,964,801B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->87.45% (6,447,169,536B) 0x420E9A: allocate_large (parlaylib/include/parlay/internal/pool_allocator.h:80)
+| ->87.45% (6,447,169,536B) 0x420E9A: allocate (parlaylib/include/parlay/internal/pool_allocator.h:136)
+|   ->87.45% (6,447,169,536B) 0x420E9A: parlay::allocator<std::byte>::allocate(unsigned long) (parlaylib/include/parlay/alloc.h:167)
+|     ->58.26% (4,294,967,296B) 0x40730F: allocate (alloc_traits.h:333)
+|     | ->58.26% (4,294,967,296B) 0x40730F: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->58.26% (4,294,967,296B) 0x40730F: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->58.26% (4,294,967,296B) 0x40730F: ensure_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:546)
+|     |       ->58.26% (4,294,967,296B) 0x40730F: resize (parlaylib/include/parlay/internal/delayed/../../sequence.h:359)
+|     |         ->58.26% (4,294,967,296B) 0x40730F: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:115)
+|     |           ->58.26% (4,294,967,296B) 0x404F73: main (tests/test.cpp:307)
+|     |             
+|     ->07.28% (536,870,912B) 0x402CD8: allocate (alloc_traits.h:333)
+|     | ->07.28% (536,870,912B) 0x402CD8: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->07.28% (536,870,912B) 0x402CD8: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->07.28% (536,870,912B) 0x402CD8: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:523)
+|     |       ->07.28% (536,870,912B) 0x402CD8: initialize_fill (parlaylib/include/parlay/internal/delayed/../../sequence.h:543)
+|     |         ->07.28% (536,870,912B) 0x402CD8: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:203)
+|     |           ->07.28% (536,870,912B) 0x402CD8: benchIO::readStringFromFile(char const*) (tests/common/IO.h:194)
+|     |             ->07.28% (536,870,912B) 0x407076: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:100)
+|     |               ->07.28% (536,870,912B) 0x404F73: main (tests/test.cpp:307)
+|     |                 
+|     ->07.28% (536,870,912B) 0x423AB0: allocate (alloc_traits.h:333)
+|     | ->07.28% (536,870,912B) 0x423AB0: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->07.28% (536,870,912B) 0x423AB0: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->07.28% (536,870,912B) 0x423AB0: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+|     |       ->07.28% (536,870,912B) 0x423AB0: sequence<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+|     |         ->07.28% (536,870,912B) 0x423AB0: from_function<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+|     |           ->07.28% (536,870,912B) 0x423AB0: tabulate<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+|     |             ->07.28% (536,870,912B) 0x423AB0: parlay::sequence<char*, parlay::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, parlay::allocator<char>, true> >(parlay::sequence<char, parlay::allocator<char>, true>&) (tests/common/IO.h:69)
+|     |               ->07.28% (536,870,912B) 0x407083: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:101)
+|     |                 ->07.28% (536,870,912B) 0x404F73: main (tests/test.cpp:307)
+|     |                   
+|     ->07.28% (536,870,912B) 0x423E23: allocate (alloc_traits.h:333)
+|     | ->07.28% (536,870,912B) 0x423E23: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->07.28% (536,870,912B) 0x423E23: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->07.28% (536,870,912B) 0x423E23: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+|     |       ->07.28% (536,870,912B) 0x423E23: parlay::sequence<bool, parlay::allocator<bool>, false>::sequence<benchIO::stringToWords<parlay::sequence<char, parlay::allocator<char>, true> >(parlay::sequence<char, parlay::allocator<char>, true>&)::{lambda(long)
+|     |         ->07.28% (536,870,912B) 0x423A29: from_function<(lambda at /home/zmen002/KDtree/tests/common/IO.h:62:35)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+|     |           ->07.28% (536,870,912B) 0x423A29: tabulate<(lambda at /home/zmen002/KDtree/tests/common/IO.h:62:35)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+|     |             ->07.28% (536,870,912B) 0x423A29: parlay::sequence<char*, parlay::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, parlay::allocator<char>, true> >(parlay::sequence<char, parlay::allocator<char>, true>&) (tests/common/IO.h:62)
+|     |               ->07.28% (536,870,912B) 0x407083: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:101)
+|     |                 ->07.28% (536,870,912B) 0x404F73: main (tests/test.cpp:307)
+|     |                   
+|     ->07.28% (536,870,912B) 0x42423B: allocate (alloc_traits.h:333)
+|     | ->07.28% (536,870,912B) 0x42423B: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->07.28% (536,870,912B) 0x42423B: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->07.28% (536,870,912B) 0x42423B: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+|     |       ->07.28% (536,870,912B) 0x42423B: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:491)
+|     |         ->07.28% (536,870,912B) 0x42423B: uninitialized (parlaylib/include/parlay/internal/delayed/../../sequence.h:464)
+|     |           ->07.28% (536,870,912B) 0x42423B: parlay::sequence<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)
+|     |             ->07.28% (536,870,912B) 0x423A78: pack_index<long, parlay::slice<bool *, bool *> > (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:418)
+|     |               ->07.28% (536,870,912B) 0x423A78: pack_index<long, parlay::sequence<bool, parlay::allocator<bool>, false> &> (parlaylib/include/parlay/primitives.h:250)
+|     |                 ->07.28% (536,870,912B) 0x423A78: parlay::sequence<char*, parlay::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, parlay::allocator<char>, true> >(parlay::sequence<char, parlay::allocator<char>, true>&) (tests/common/IO.h:66)
+|     |                   ->07.28% (536,870,912B) 0x407083: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:101)
+|     |                     ->07.28% (536,870,912B) 0x404F73: main (tests/test.cpp:307)
+|     |                       
+|     ->00.06% (4,718,592B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->12.53% (924,051,888B) 0x4210A3: allocate_blocks (parlaylib/include/parlay/internal/block_allocator.h:101)
+| ->12.53% (924,051,888B) 0x4210A3: get_list (parlaylib/include/parlay/internal/block_allocator.h:116)
+|   ->12.53% (924,051,888B) 0x4210A3: parlay::internal::block_allocator::alloc() (parlaylib/include/parlay/internal/block_allocator.h:200)
+|     ->10.76% (792,985,600B) 0x43F7B1: allocate (alloc_traits.h:333)
+|     | ->10.76% (792,985,600B) 0x43F7B1: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->10.76% (792,985,600B) 0x43F7B1: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->10.76% (792,985,600B) 0x43F7B1: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+|     |       ->10.76% (792,985,600B) 0x43F7B1: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:491)
+|     |         ->10.76% (792,985,600B) 0x43F7B1: uninitialized (parlaylib/include/parlay/internal/delayed/../../sequence.h:464)
+|     |           ->10.76% (792,985,600B) 0x43F7B1: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::leaf::leaf(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>) (include/cpdd/utility/tree_node.hpp:36)
+|     |             ->10.76% (792,985,600B) 0x43E08C: alloc_leaf_node (include/cpdd/utility/tree_node.hpp:64)
+|     |               ->10.76% (792,985,600B) 0x43E08C: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:178)
+|     |                 ->05.43% (400,556,032B) 0x43E4B6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:253)
+|     |                 | ->02.29% (168,558,592B) 0x43E4B6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:253)
+|     |                 | | ->02.08% (153,354,240B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | | ->02.08% (153,354,240B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |   ->02.08% (153,354,240B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |     ->02.08% (153,354,240B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |       ->02.08% (153,354,240B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |         ->02.08% (153,354,240B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |           ->02.08% (153,354,240B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |             ->02.08% (153,354,240B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |               ->02.08% (153,354,240B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |                 ->02.08% (153,354,240B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 | | |                   ->02.08% (153,354,240B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 | | |                     ->02.08% (153,354,240B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 | | |                       ->02.08% (153,354,240B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 | | |                         
+|     |                 | | ->00.21% (15,204,352B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 | | 
+|     |                 | ->02.05% (150,994,944B) 0x43E479: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:251)
+|     |                 | | ->01.85% (136,577,024B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | | ->01.85% (136,577,024B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |   ->01.85% (136,577,024B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |     ->01.85% (136,577,024B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |       ->01.85% (136,577,024B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |         ->01.85% (136,577,024B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |           ->01.85% (136,577,024B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |             ->01.85% (136,577,024B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |               ->01.85% (136,577,024B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |                 ->01.85% (136,577,024B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 | | |                   ->01.85% (136,577,024B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 | | |                     ->01.85% (136,577,024B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 | | |                       ->01.85% (136,577,024B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 | | |                         
+|     |                 | | ->00.20% (14,417,920B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 | | 
+|     |                 | ->01.10% (81,002,496B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |   ->01.10% (81,002,496B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |     ->01.10% (81,002,496B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |       ->01.10% (81,002,496B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |         ->01.10% (81,002,496B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |           ->01.10% (81,002,496B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |             ->01.10% (81,002,496B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |               ->01.10% (81,002,496B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |                 ->01.10% (81,002,496B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |                   ->01.10% (81,002,496B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 |                     ->01.10% (81,002,496B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 |                       ->01.10% (81,002,496B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 |                         ->01.10% (81,002,496B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 |                           
+|     |                 ->05.31% (391,118,848B) 0x43E479: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:251)
+|     |                 | ->02.21% (162,791,424B) 0x43E4B6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:253)
+|     |                 | | ->01.96% (144,441,344B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | | ->01.96% (144,441,344B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |   ->01.96% (144,441,344B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |     ->01.96% (144,441,344B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |       ->01.96% (144,441,344B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |         ->01.96% (144,441,344B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |           ->01.96% (144,441,344B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |             ->01.96% (144,441,344B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |               ->01.96% (144,441,344B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |                 ->01.96% (144,441,344B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 | | |                   ->01.96% (144,441,344B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 | | |                     ->01.96% (144,441,344B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 | | |                       ->01.96% (144,441,344B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 | | |                         
+|     |                 | | ->00.25% (18,350,080B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 | | 
+|     |                 | ->01.93% (142,606,336B) 0x43E479: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:251)
+|     |                 | | ->01.76% (130,023,424B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | | ->01.76% (130,023,424B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |   ->01.76% (130,023,424B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |     ->01.76% (130,023,424B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |       ->01.76% (130,023,424B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |         ->01.76% (130,023,424B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |           ->01.76% (130,023,424B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |             ->01.76% (130,023,424B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |               ->01.76% (130,023,424B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |                 ->01.76% (130,023,424B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 | | |                   ->01.76% (130,023,424B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 | | |                     ->01.76% (130,023,424B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 | | |                       ->01.76% (130,023,424B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 | | |                         
+|     |                 | | ->00.17% (12,582,912B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 | | 
+|     |                 | ->01.16% (85,721,088B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |   ->01.16% (85,721,088B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |     ->01.16% (85,721,088B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |       ->01.16% (85,721,088B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |         ->01.16% (85,721,088B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |           ->01.16% (85,721,088B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |             ->01.16% (85,721,088B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |               ->01.16% (85,721,088B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |                 ->01.16% (85,721,088B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |                   ->01.16% (85,721,088B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 |                     ->01.16% (85,721,088B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 |                       ->01.16% (85,721,088B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 |                         ->01.16% (85,721,088B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 |                           
+|     |                 ->00.02% (1,310,720B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 
+|     ->01.78% (131,066,288B) in 12 places, all below massif's threshold (1.00%)
+|       
+->00.01% (743,377B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 27  7,435,954,360    7,425,961,928    7,425,536,234       425,694            0
+ 28  7,507,099,368    7,354,819,224    7,354,422,274       396,950            0
+ 29  8,043,970,368    6,817,948,224    6,817,551,362       396,862            0
+ 30  8,580,841,368    6,281,077,224    6,280,680,450       396,774            0
+ 31  9,117,712,368    5,744,206,224    5,743,809,538       396,686            0
+ 32  9,654,583,368    5,207,335,224    5,206,938,626       396,598            0
+99.99% (5,206,938,626B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->82.48% (4,294,967,296B) 0x420E9A: allocate_large (parlaylib/include/parlay/internal/pool_allocator.h:80)
+| ->82.48% (4,294,967,296B) 0x420E9A: allocate (parlaylib/include/parlay/internal/pool_allocator.h:136)
+|   ->82.48% (4,294,967,296B) 0x420E9A: parlay::allocator<std::byte>::allocate(unsigned long) (parlaylib/include/parlay/alloc.h:167)
+|     ->82.48% (4,294,967,296B) 0x40730F: allocate (alloc_traits.h:333)
+|     | ->82.48% (4,294,967,296B) 0x40730F: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->82.48% (4,294,967,296B) 0x40730F: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->82.48% (4,294,967,296B) 0x40730F: ensure_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:546)
+|     |       ->82.48% (4,294,967,296B) 0x40730F: resize (parlaylib/include/parlay/internal/delayed/../../sequence.h:359)
+|     |         ->82.48% (4,294,967,296B) 0x40730F: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:115)
+|     |           ->82.48% (4,294,967,296B) 0x404F73: main (tests/test.cpp:307)
+|     |             
+|     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->17.50% (911,212,544B) 0x4210A3: allocate_blocks (parlaylib/include/parlay/internal/block_allocator.h:101)
+| ->17.50% (911,212,544B) 0x4210A3: get_list (parlaylib/include/parlay/internal/block_allocator.h:116)
+|   ->17.50% (911,212,544B) 0x4210A3: parlay::internal::block_allocator::alloc() (parlaylib/include/parlay/internal/block_allocator.h:200)
+|     ->16.21% (844,103,680B) 0x43F7B1: allocate (alloc_traits.h:333)
+|     | ->16.21% (844,103,680B) 0x43F7B1: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->16.21% (844,103,680B) 0x43F7B1: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->16.21% (844,103,680B) 0x43F7B1: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+|     |       ->16.21% (844,103,680B) 0x43F7B1: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:491)
+|     |         ->16.21% (844,103,680B) 0x43F7B1: uninitialized (parlaylib/include/parlay/internal/delayed/../../sequence.h:464)
+|     |           ->16.21% (844,103,680B) 0x43F7B1: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::leaf::leaf(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>) (include/cpdd/utility/tree_node.hpp:36)
+|     |             ->16.21% (844,103,680B) 0x43E08C: alloc_leaf_node (include/cpdd/utility/tree_node.hpp:64)
+|     |               ->16.21% (844,103,680B) 0x43E08C: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:178)
+|     |                 ->08.17% (425,459,712B) 0x43E4B6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:253)
+|     |                 | ->03.43% (178,520,064B) 0x43E4B6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:253)
+|     |                 | | ->03.13% (163,053,568B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | | ->03.13% (163,053,568B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |   ->03.13% (163,053,568B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |     ->03.13% (163,053,568B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |       ->03.13% (163,053,568B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |         ->03.13% (163,053,568B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |           ->03.13% (163,053,568B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |             ->03.13% (163,053,568B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |               ->03.13% (163,053,568B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |                 ->03.13% (163,053,568B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 | | |                   ->03.13% (163,053,568B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 | | |                     ->03.13% (163,053,568B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 | | |                       ->03.13% (163,053,568B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 | | |                         
+|     |                 | | ->00.30% (15,466,496B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 | | 
+|     |                 | ->03.06% (159,121,408B) 0x43E479: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:251)
+|     |                 | | ->02.76% (143,654,912B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | | ->02.76% (143,654,912B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |   ->02.76% (143,654,912B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |     ->02.76% (143,654,912B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |       ->02.76% (143,654,912B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |         ->02.76% (143,654,912B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |           ->02.76% (143,654,912B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |             ->02.76% (143,654,912B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |               ->02.76% (143,654,912B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |                 ->02.76% (143,654,912B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 | | |                   ->02.76% (143,654,912B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 | | |                     ->02.76% (143,654,912B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 | | |                       ->02.76% (143,654,912B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 | | |                         
+|     |                 | | ->00.30% (15,466,496B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 | | 
+|     |                 | ->01.69% (87,818,240B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |   ->01.69% (87,818,240B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |     ->01.69% (87,818,240B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |       ->01.69% (87,818,240B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |         ->01.69% (87,818,240B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |           ->01.69% (87,818,240B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |             ->01.69% (87,818,240B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |               ->01.69% (87,818,240B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |                 ->01.69% (87,818,240B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |                   ->01.69% (87,818,240B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 |                     ->01.69% (87,818,240B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 |                       ->01.69% (87,818,240B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 |                         ->01.69% (87,818,240B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 |                           
+|     |                 ->08.01% (417,333,248B) 0x43E479: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:251)
+|     |                 | ->03.32% (172,752,896B) 0x43E4B6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:253)
+|     |                 | | ->02.95% (153,616,384B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | | ->02.95% (153,616,384B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |   ->02.95% (153,616,384B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |     ->02.95% (153,616,384B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |       ->02.95% (153,616,384B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |         ->02.95% (153,616,384B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |           ->02.95% (153,616,384B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |             ->02.95% (153,616,384B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |               ->02.95% (153,616,384B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |                 ->02.95% (153,616,384B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 | | |                   ->02.95% (153,616,384B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 | | |                     ->02.95% (153,616,384B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 | | |                       ->02.95% (153,616,384B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 | | |                         
+|     |                 | | ->00.37% (19,136,512B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 | | 
+|     |                 | ->02.96% (153,878,528B) 0x43E479: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::serial_build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:251)
+|     |                 | | ->02.68% (139,722,752B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | | ->02.68% (139,722,752B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |   ->02.68% (139,722,752B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |     ->02.68% (139,722,752B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |       ->02.68% (139,722,752B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |         ->02.68% (139,722,752B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |           ->02.68% (139,722,752B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 | | |             ->02.68% (139,722,752B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 | | |               ->02.68% (139,722,752B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 | | |                 ->02.68% (139,722,752B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 | | |                   ->02.68% (139,722,752B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 | | |                     ->02.68% (139,722,752B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 | | |                       ->02.68% (139,722,752B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 | | |                         
+|     |                 | | ->00.27% (14,155,776B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 | | 
+|     |                 | ->01.74% (90,701,824B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |   ->01.74% (90,701,824B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |     ->01.74% (90,701,824B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |       ->01.74% (90,701,824B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |         ->01.74% (90,701,824B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |           ->01.74% (90,701,824B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |             ->01.74% (90,701,824B) 0x43D39D: operator() (include/cpdd/batch_op/build_tree.hpp:306)
+|     |                 |               ->01.74% (90,701,824B) 0x43D39D: parallel_for<(lambda at /home/zmen002/KDtree/include/cpdd/batch_op/build_tree.hpp:299:7)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                 |                 ->01.74% (90,701,824B) 0x43D39D: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:297)
+|     |                 |                   ->01.74% (90,701,824B) 0x43CDB6: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char) (include/cpdd/batch_op/build_tree.hpp:13)
+|     |                 |                     ->01.74% (90,701,824B) 0x4394B5: void buildTree<cpdd::PointType<long, (unsigned char)3>, 1>(int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value> const&, int const&, cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >&) (tests/testFramework.h:281)
+|     |                 |                       ->01.74% (90,701,824B) 0x40AD16: void testParallelKDtree<cpdd::PointType<long, (unsigned char)3> >(int const&, int const&, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, parlay::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, unsigned long const&, int const&, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/test.cpp:46)
+|     |                 |                         ->01.74% (90,701,824B) 0x4062E8: main (tests/test.cpp:383)
+|     |                 |                           
+|     |                 ->00.03% (1,310,720B) in 1+ places, all below ms_print's threshold (01.00%)
+|     |                 
+|     ->01.09% (56,623,104B) 0x42CE39: allocate (alloc_traits.h:333)
+|     | ->01.09% (56,623,104B) 0x42CE39: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+|     |   ->01.09% (56,623,104B) 0x42CE39: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+|     |     ->01.09% (56,623,104B) 0x42CE39: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+|     |       ->01.09% (56,623,104B) 0x42CE39: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:125)
+|     |         ->01.09% (56,623,104B) 0x42CE39: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:583)
+|     |           ->01.09% (56,623,104B) 0x42CE39: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:110)
+|     |             ->01.09% (56,623,104B) 0x42CE39: construct_at<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, const parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> &> (stl_construct.h:97)
+|     |               ->01.09% (56,623,104B) 0x42CE39: _S_construct<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, const parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> &> (alloc_traits.h:278)
+|     |                 ->01.09% (56,623,104B) 0x42CE39: construct<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, const parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> &> (alloc_traits.h:379)
+|     |                   ->01.09% (56,623,104B) 0x42CE39: initialize_explicit (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:499)
+|     |                     ->01.09% (56,623,104B) 0x42CE39: operator() (parlaylib/include/parlay/internal/delayed/../../sequence.h:546)
+|     |                       ->01.09% (56,623,104B) 0x42CE39: parallel_for<(lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/delayed/../../sequence.h:545:24)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+|     |                         ->01.09% (56,623,104B) 0x42CE39: initialize_fill (parlaylib/include/parlay/internal/delayed/../../sequence.h:545)
+|     |                           ->01.09% (56,623,104B) 0x42CE39: parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> >, false>::sequence(unsigned long, parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> const&) (parlaylib/include/parlay/internal/delayed/../../sequence.h:203)
+|     |                             ->01.09% (56,623,104B) 0x43E98F: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::partition(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned long, parlay::sequence<std::pair<long, unsigned char>, parlay::allocator<std::pair<long, unsigned char> >, false> const&, parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>&) (include/cpdd/batch_op/build_tree.hpp:99)
+|     |                               ->01.09% (56,623,104B) 0x43D0DA: cpdd::ParallelKDtree<cpdd::PointType<long, (unsigned char)3> >::build_recursive(parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, parlay::slice<cpdd::PointType<long, (unsigned char)3>*, cpdd::PointType<long, (unsigned char)3>*>, unsigned char, unsigned char, std::pair<cpdd::PointType<long, (unsigned char)3>, cpdd::PointType<long, (unsigned char)3> > const&) (include/cpdd/batch_op/build_tree.hpp:274)
+|     |                                 ->01.09% (56,623,104B) in 2 places, all below massif's threshold (1.00%)
+|     |                                   
+|     ->00.20% (10,485,760B) in 1+ places, all below ms_print's threshold (01.00%)
+|     
+->00.01% (758,786B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33 13,949,550,752      912,367,840      911,971,330       396,510            0
+ 34 14,000,366,024      861,553,336      861,175,842       377,494            0
+ 35 14,051,246,544      810,673,712      810,315,026       358,686            0
+ 36 14,098,454,616      763,466,408      763,125,050       341,358            0
+ 37 14,145,137,768      716,783,896      716,459,394       324,502            0
+ 38 14,190,510,336      671,412,096      671,104,162       307,934            0
+ 39 14,243,227,304      618,696,024      618,408,178       287,846            0
+ 40 14,295,156,584      566,767,640      566,498,714       268,926            0
+ 41 14,350,232,392      511,692,728      511,443,818       248,910            0
+ 42 14,411,865,376      450,060,640      449,834,466       226,174            0
+ 43 14,470,875,992      391,051,048      390,846,306       204,742            0
+ 44 14,539,065,896      322,862,296      322,682,666       179,630            0
+ 45 14,609,877,240      252,051,976      251,897,746       154,230            0
+ 46 14,683,575,728      178,354,768      178,228,082       126,686            0
+ 47 14,759,371,680      102,560,096      102,461,426        98,670            0
+ 48 14,830,183,272       31,749,528       31,676,626        72,902            0
+ 49 14,861,819,560          128,472          127,258         1,214            0
+ 50 14,861,819,656          128,376          127,210         1,166            0
+ 51 14,861,836,176          111,856          110,762         1,094            0
+ 52 14,861,836,256          111,776          110,714         1,062            0
+ 53 14,861,836,312          111,720          110,690         1,030            0
+99.08% (110,690B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->65.08% (72,704B) 0x50F5C19: pool (eh_alloc.cc:123)
+| ->65.08% (72,704B) 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+|   ->65.08% (72,704B) 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+|     ->65.08% (72,704B) 0x4009119: call_init.part.0 (dl-init.c:72)
+|       ->65.08% (72,704B) 0x4009219: call_init (dl-init.c:118)
+|         ->65.08% (72,704B) 0x4009219: _dl_init (dl-init.c:119)
+|           ->65.08% (72,704B) 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+|             ->65.08% (72,704B) 0xC: ???
+|               ->65.08% (72,704B) 0x1FFEFFFC0E: ???
+|                 ->65.08% (72,704B) 0x1FFEFFFC1E: ???
+|                   ->65.08% (72,704B) 0x1FFEFFFC21: ???
+|                     ->65.08% (72,704B) 0x1FFEFFFC55: ???
+|                       ->65.08% (72,704B) 0x1FFEFFFC58: ???
+|                         ->65.08% (72,704B) 0x1FFEFFFC5A: ???
+|                           ->65.08% (72,704B) 0x1FFEFFFC5D: ???
+|                             ->65.08% (72,704B) 0x1FFEFFFC60: ???
+|                               ->65.08% (72,704B) 0x1FFEFFFC63: ???
+|                                 ->65.08% (72,704B) 0x1FFEFFFC65: ???
+|                                   ->65.08% (72,704B) 0x1FFEFFFC68: ???
+|                                     ->65.08% (72,704B) 0x1FFEFFFC6A: ???
+|                                       ->65.08% (72,704B) 0x1FFEFFFC6D: ???
+|                                         
+->14.72% (16,448B) 0x418B68: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<void*>::Node, std::default_delete<parlay::internal::hazptr_stack<void*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+| ->14.72% (16,448B) 0x418715: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+|   ->14.72% (16,448B) 0x418715: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+|     ->14.72% (16,448B) 0x418715: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+|       ->14.72% (16,448B) 0x418715: parlay::internal::hazptr_stack<void*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+|         ->14.72% (16,448B) 0x41820B: make_unique<parlay::internal::hazptr_stack<void *>[]> (unique_ptr.h:1085)
+|           ->14.72% (16,448B) 0x41820B: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:119)
+|             ->14.72% (16,448B) 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+|               ->14.72% (16,448B) 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+|                 ->14.72% (16,448B) 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+|                   ->14.72% (16,448B) 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+|                     ->14.72% (16,448B) 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+|                       ->14.72% (16,448B) 0x404B83: main (tests/test.cpp:298)
+|                         
+->14.72% (16,448B) 0x419DB8: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<std::byte*>::Node, std::default_delete<parlay::internal::hazptr_stack<std::byte*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+| ->14.72% (16,448B) 0x419855: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+|   ->14.72% (16,448B) 0x419855: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+|     ->14.72% (16,448B) 0x419855: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+|       ->14.72% (16,448B) 0x419855: parlay::internal::hazptr_stack<std::byte*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+|         ->14.72% (16,448B) 0x4195BE: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:132)
+|           ->14.72% (16,448B) 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+|             ->14.72% (16,448B) 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+|               ->14.72% (16,448B) 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+|                 ->14.72% (16,448B) 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+|                   ->14.72% (16,448B) 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+|                     ->14.72% (16,448B) 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+|                       ->14.72% (16,448B) 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+|                         ->14.72% (16,448B) 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+|                           ->14.72% (16,448B) 0x404B83: main (tests/test.cpp:298)
+|                             
+->03.67% (4,096B) 0x5A1778F: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.67% (4,096B) 0x5A256FF: _IO_doallocbuf (genops.c:347)
+|   ->03.67% (4,096B) 0x5A24967: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:749)
+|     ->03.67% (4,096B) 0x5A23B0E: UnknownInlinedFun (fileops.c:1248)
+|       ->03.67% (4,096B) 0x5A23B0E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1201)
+|         ->03.67% (4,096B) 0x5A18BFB: fwrite (iofwrite.c:39)
+|           ->03.67% (4,096B) 0x517ECC3: sputn (streambuf:458)
+|             ->03.67% (4,096B) 0x517ECC3: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+|               ->03.67% (4,096B) 0x517ECC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+|                 ->03.67% (4,096B) 0x404F4E: operator<<<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:4037)
+|                   ->03.67% (4,096B) 0x404F4E: main (tests/test.cpp:306)
+|                     
+->00.89% (994B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 54 14,861,836,392          111,640          110,642           998            0
+ 55 14,861,836,472          111,560          110,594           966            0
+ 56 14,861,836,552          111,480          110,546           934            0
+ 57 14,861,836,632          111,400          110,498           902            0
+ 58 14,861,836,688          111,344          110,474           870            0
+ 59 14,861,836,784          111,248          110,426           822            0
+ 60 14,861,836,864          111,168          110,378           790            0
+ 61 14,861,836,920          111,112          110,354           758            0
+ 62 14,861,836,976          111,056          110,330           726            0
+ 63 14,861,837,056          110,976          110,282           694            0
+99.37% (110,282B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->65.51% (72,704B) 0x50F5C19: pool (eh_alloc.cc:123)
+| ->65.51% (72,704B) 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+|   ->65.51% (72,704B) 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+|     ->65.51% (72,704B) 0x4009119: call_init.part.0 (dl-init.c:72)
+|       ->65.51% (72,704B) 0x4009219: call_init (dl-init.c:118)
+|         ->65.51% (72,704B) 0x4009219: _dl_init (dl-init.c:119)
+|           ->65.51% (72,704B) 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+|             ->65.51% (72,704B) 0xC: ???
+|               ->65.51% (72,704B) 0x1FFEFFFC0E: ???
+|                 ->65.51% (72,704B) 0x1FFEFFFC1E: ???
+|                   ->65.51% (72,704B) 0x1FFEFFFC21: ???
+|                     ->65.51% (72,704B) 0x1FFEFFFC55: ???
+|                       ->65.51% (72,704B) 0x1FFEFFFC58: ???
+|                         ->65.51% (72,704B) 0x1FFEFFFC5A: ???
+|                           ->65.51% (72,704B) 0x1FFEFFFC5D: ???
+|                             ->65.51% (72,704B) 0x1FFEFFFC60: ???
+|                               ->65.51% (72,704B) 0x1FFEFFFC63: ???
+|                                 ->65.51% (72,704B) 0x1FFEFFFC65: ???
+|                                   ->65.51% (72,704B) 0x1FFEFFFC68: ???
+|                                     ->65.51% (72,704B) 0x1FFEFFFC6A: ???
+|                                       ->65.51% (72,704B) 0x1FFEFFFC6D: ???
+|                                         
+->14.82% (16,448B) 0x418B68: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<void*>::Node, std::default_delete<parlay::internal::hazptr_stack<void*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+| ->14.82% (16,448B) 0x418715: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+|   ->14.82% (16,448B) 0x418715: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+|     ->14.82% (16,448B) 0x418715: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+|       ->14.82% (16,448B) 0x418715: parlay::internal::hazptr_stack<void*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+|         ->14.82% (16,448B) 0x41820B: make_unique<parlay::internal::hazptr_stack<void *>[]> (unique_ptr.h:1085)
+|           ->14.82% (16,448B) 0x41820B: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:119)
+|             ->14.82% (16,448B) 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+|               ->14.82% (16,448B) 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+|                 ->14.82% (16,448B) 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+|                   ->14.82% (16,448B) 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+|                     ->14.82% (16,448B) 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+|                       ->14.82% (16,448B) 0x404B83: main (tests/test.cpp:298)
+|                         
+->14.82% (16,448B) 0x419DB8: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<std::byte*>::Node, std::default_delete<parlay::internal::hazptr_stack<std::byte*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+| ->14.82% (16,448B) 0x419855: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+|   ->14.82% (16,448B) 0x419855: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+|     ->14.82% (16,448B) 0x419855: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+|       ->14.82% (16,448B) 0x419855: parlay::internal::hazptr_stack<std::byte*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+|         ->14.82% (16,448B) 0x4195BE: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:132)
+|           ->14.82% (16,448B) 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+|             ->14.82% (16,448B) 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+|               ->14.82% (16,448B) 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+|                 ->14.82% (16,448B) 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+|                   ->14.82% (16,448B) 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+|                     ->14.82% (16,448B) 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+|                       ->14.82% (16,448B) 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+|                         ->14.82% (16,448B) 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+|                           ->14.82% (16,448B) 0x404B83: main (tests/test.cpp:298)
+|                             
+->03.69% (4,096B) 0x5A1778F: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.69% (4,096B) 0x5A256FF: _IO_doallocbuf (genops.c:347)
+|   ->03.69% (4,096B) 0x5A24967: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:749)
+|     ->03.69% (4,096B) 0x5A23B0E: UnknownInlinedFun (fileops.c:1248)
+|       ->03.69% (4,096B) 0x5A23B0E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1201)
+|         ->03.69% (4,096B) 0x5A18BFB: fwrite (iofwrite.c:39)
+|           ->03.69% (4,096B) 0x517ECC3: sputn (streambuf:458)
+|             ->03.69% (4,096B) 0x517ECC3: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+|               ->03.69% (4,096B) 0x517ECC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+|                 ->03.69% (4,096B) 0x404F4E: operator<<<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:4037)
+|                   ->03.69% (4,096B) 0x404F4E: main (tests/test.cpp:306)
+|                     
+->00.53% (586B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 64 14,861,837,112          110,920          110,258           662            0
+ 65 14,861,837,168          110,864          110,234           630            0
+ 66 14,861,837,248          110,784          110,186           598            0
+ 67 14,861,837,304          110,728          110,162           566            0
+ 68 14,861,837,360          110,672          110,138           534            0
+ 69 14,861,837,416          110,616          110,114           502            0
+ 70 14,861,837,496          110,536          110,066           470            0
+ 71 14,861,854,016           94,016           93,618           398            0
+ 72 14,861,854,112           93,920           93,570           350            0
+ 73 14,861,854,192           93,840           93,522           318            0
+99.66% (93,522B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->77.48% (72,704B) 0x50F5C19: pool (eh_alloc.cc:123)
+| ->77.48% (72,704B) 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+|   ->77.48% (72,704B) 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+|     ->77.48% (72,704B) 0x4009119: call_init.part.0 (dl-init.c:72)
+|       ->77.48% (72,704B) 0x4009219: call_init (dl-init.c:118)
+|         ->77.48% (72,704B) 0x4009219: _dl_init (dl-init.c:119)
+|           ->77.48% (72,704B) 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+|             ->77.48% (72,704B) 0xC: ???
+|               ->77.48% (72,704B) 0x1FFEFFFC0E: ???
+|                 ->77.48% (72,704B) 0x1FFEFFFC1E: ???
+|                   ->77.48% (72,704B) 0x1FFEFFFC21: ???
+|                     ->77.48% (72,704B) 0x1FFEFFFC55: ???
+|                       ->77.48% (72,704B) 0x1FFEFFFC58: ???
+|                         ->77.48% (72,704B) 0x1FFEFFFC5A: ???
+|                           ->77.48% (72,704B) 0x1FFEFFFC5D: ???
+|                             ->77.48% (72,704B) 0x1FFEFFFC60: ???
+|                               ->77.48% (72,704B) 0x1FFEFFFC63: ???
+|                                 ->77.48% (72,704B) 0x1FFEFFFC65: ???
+|                                   ->77.48% (72,704B) 0x1FFEFFFC68: ???
+|                                     ->77.48% (72,704B) 0x1FFEFFFC6A: ???
+|                                       ->77.48% (72,704B) 0x1FFEFFFC6D: ???
+|                                         
+->17.53% (16,448B) 0x418B68: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<void*>::Node, std::default_delete<parlay::internal::hazptr_stack<void*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+| ->17.53% (16,448B) 0x418715: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+|   ->17.53% (16,448B) 0x418715: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+|     ->17.53% (16,448B) 0x418715: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+|       ->17.53% (16,448B) 0x418715: parlay::internal::hazptr_stack<void*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+|         ->17.53% (16,448B) 0x41820B: make_unique<parlay::internal::hazptr_stack<void *>[]> (unique_ptr.h:1085)
+|           ->17.53% (16,448B) 0x41820B: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:119)
+|             ->17.53% (16,448B) 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+|               ->17.53% (16,448B) 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+|                 ->17.53% (16,448B) 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+|                   ->17.53% (16,448B) 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+|                     ->17.53% (16,448B) 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+|                       ->17.53% (16,448B) 0x404B83: main (tests/test.cpp:298)
+|                         
+->04.36% (4,096B) 0x5A1778F: _IO_file_doallocate (filedoalloc.c:101)
+| ->04.36% (4,096B) 0x5A256FF: _IO_doallocbuf (genops.c:347)
+|   ->04.36% (4,096B) 0x5A24967: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:749)
+|     ->04.36% (4,096B) 0x5A23B0E: UnknownInlinedFun (fileops.c:1248)
+|       ->04.36% (4,096B) 0x5A23B0E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1201)
+|         ->04.36% (4,096B) 0x5A18BFB: fwrite (iofwrite.c:39)
+|           ->04.36% (4,096B) 0x517ECC3: sputn (streambuf:458)
+|             ->04.36% (4,096B) 0x517ECC3: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+|               ->04.36% (4,096B) 0x517ECC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+|                 ->04.36% (4,096B) 0x404F4E: operator<<<char, std::char_traits<char>, std::allocator<char> > (basic_string.h:4037)
+|                   ->04.36% (4,096B) 0x404F4E: main (tests/test.cpp:306)
+|                     
+->00.29% (274B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 74 14,861,854,288           93,744           93,474           270            0
+ 75 14,861,854,384           93,648           93,426           222            0
+ 76 14,861,854,440           93,592           93,402           190            0
+ 77 14,861,854,496           93,536           93,378           158            0
+ 78 14,861,854,552           93,480           93,354           126            0
+ 79 14,861,871,056           76,976           76,906            70            0
+ 80 14,861,871,136           76,896           76,842            54            0
+ 81 14,861,871,216           76,816           76,800            16            0
+ 82 14,861,943,928            4,104            4,096             8            0
+ 83 14,861,948,032                0                0             0            0
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+

@@ -70,22 +70,22 @@ void ANN(parlay::sequence<vtx> &v, int k, int rounds,
     knn_tree T = knn_tree(v2, whole_box);
 
     //* build
-    double aveBuild = time_loop(
-        rounds, 1.0, [&]() {},
-        [&]() {
-          v2 = parlay::tabulate(n, [&](size_t i) -> vtx * { return &v[i]; });
-          whole_box = knn_tree::o_tree::get_box(v2);
-          T = knn_tree(v2, whole_box);
-        },
-        [&]() { T.tree.reset(); });
+    // double aveBuild = time_loop(
+    //     rounds, 1.0, [&]() {},
+    //     [&]() {
+    //       v2 = parlay::tabulate(n, [&](size_t i) -> vtx * { return &v[i]; });
+    //       whole_box = knn_tree::o_tree::get_box(v2);
+    //       T = knn_tree(v2, whole_box);
+    //     },
+    //     [&]() { T.tree.reset(); });
 
     //* restore
-    v2 = parlay::tabulate(n, [&](size_t i) -> vtx * { return &v[i]; });
-    whole_box = knn_tree::o_tree::get_box(v2);
-    T = knn_tree(v2, whole_box);
+    // v2 = parlay::tabulate(n, [&](size_t i) -> vtx * { return &v[i]; });
+    // whole_box = knn_tree::o_tree::get_box(v2);
+    // T = knn_tree(v2, whole_box);
 
-    std::cout << aveBuild << " " << T.tree.get()->depth() << " " << std::flush;
-    // prelims for insert/delete
+    // std::cout << aveBuild << " " << T.tree.get()->depth() << " " <<
+    // std::flush; prelims for insert/delete
     int dims;
     node *root;
     box_delta bd;

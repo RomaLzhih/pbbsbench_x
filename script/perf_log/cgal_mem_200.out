@@ -1,0 +1,1052 @@
+desc: --time-unit=B --massif-out-file=perf_log/cgal_mem_200.out
+cmd: ./../build/cgal -p /localdata/zmen002/kdtree/ss_varden/20000000_3/1.in -d 3 -k 10 -t 0 -q 0 -i 0
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=352849912
+mem_heap_B=352822607
+mem_heap_extra_B=873
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=708354536
+mem_heap_B=708321177
+mem_heap_extra_B=1503
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1188356528
+mem_heap_B=1188321201
+mem_heap_extra_B=3471
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1191112360
+mem_heap_B=1185565385
+mem_heap_extra_B=3455
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1671114352
+mem_heap_B=1665565409
+mem_heap_extra_B=5423
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1671114352
+mem_heap_B=1665565409
+mem_heap_extra_B=5423
+mem_stacks_B=0
+heap_tree=detailed
+n5: 1665565409 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 480000024 0x412955: allocate (new_allocator.h:151)
+  n1: 480000024 0x412955: allocate (allocator.h:198)
+   n1: 480000024 0x412955: allocate (alloc_traits.h:482)
+    n1: 480000024 0x412955: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 480000024 0x412955: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 480000024 0x412955: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 480000024 0x412955: sequence<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+        n1: 480000024 0x412955: from_function<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+         n1: 480000024 0x412955: tabulate<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+          n1: 480000024 0x412955: parlay::sequence<char*, std::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&) (tests/common/IO.h:69)
+           n1: 480000024 0x406E92: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)10> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, std::is_same<cpdd::PointType<long, (unsigned char)10>, char>::value>&, int, bool) (tests/testFramework.h:101)
+            n0: 480000024 0x404EB1: main (tests/cgal.cpp:407)
+ n1: 480000024 0x4130A2: allocate (new_allocator.h:151)
+  n1: 480000024 0x4130A2: allocate (allocator.h:198)
+   n1: 480000024 0x4130A2: allocate (alloc_traits.h:482)
+    n1: 480000024 0x4130A2: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 480000024 0x4130A2: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 480000024 0x4130A2: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 480000024 0x4130A2: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:491)
+        n1: 480000024 0x4130A2: uninitialized (parlaylib/include/parlay/internal/delayed/../../sequence.h:464)
+         n1: 480000024 0x4130A2: parlay::sequence<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}>::value_type, std::allocator<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}>::value_type>, std::is_same<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}>::value_type, char>::value> parlay::internal::pack<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}>, parlay::slice<bool*, bool*> >(parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}> const&, parlay::slice<bool*, bool*> const&, unsigned int) (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:327)
+          n1: 480000024 0x412928: pack_index<long, parlay::slice<bool *, bool *> > (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:418)
+           n1: 480000024 0x412928: pack_index<long, parlay::sequence<bool, std::allocator<bool>, false> &> (parlaylib/include/parlay/primitives.h:250)
+            n1: 480000024 0x412928: parlay::sequence<char*, std::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&) (tests/common/IO.h:66)
+             n1: 480000024 0x406E92: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)10> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, std::is_same<cpdd::PointType<long, (unsigned char)10>, char>::value>&, int, bool) (tests/testFramework.h:101)
+              n0: 480000024 0x404EB1: main (tests/cgal.cpp:407)
+ n1: 352742754 0x4030EC: allocate (new_allocator.h:151)
+  n1: 352742754 0x4030EC: allocate (allocator.h:198)
+   n1: 352742754 0x4030EC: allocate (alloc_traits.h:482)
+    n1: 352742754 0x4030EC: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 352742754 0x4030EC: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 352742754 0x4030EC: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:523)
+       n1: 352742754 0x4030EC: initialize_fill (parlaylib/include/parlay/internal/delayed/../../sequence.h:543)
+        n1: 352742754 0x4030EC: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:203)
+         n1: 352742754 0x4030EC: benchIO::readStringFromFile(char const*) (tests/common/IO.h:194)
+          n1: 352742754 0x406E85: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)10> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, std::is_same<cpdd::PointType<long, (unsigned char)10>, char>::value>&, int, bool) (tests/testFramework.h:100)
+           n0: 352742754 0x404EB1: main (tests/cgal.cpp:407)
+ n1: 352742754 0x412ECE: allocate (new_allocator.h:151)
+  n1: 352742754 0x412ECE: allocate (allocator.h:198)
+   n1: 352742754 0x412ECE: allocate (alloc_traits.h:482)
+    n1: 352742754 0x412ECE: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 352742754 0x412ECE: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 352742754 0x412ECE: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 352742754 0x412ECE: parlay::sequence<bool, std::allocator<bool>, false>::sequence<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)#2}>(unsigned long, parlay::sequence<char, std::allocator<char>, true>&&, parlay::sequence<bool, std::allocator<bool>, false>::_from_function_tag, unsigned long) (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+        n1: 352742754 0x4128D7: from_function<(lambda at /home/zmen002/KDtree/tests/common/IO.h:62:35)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+         n1: 352742754 0x4128D7: tabulate<(lambda at /home/zmen002/KDtree/tests/common/IO.h:62:35)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+          n1: 352742754 0x4128D7: parlay::sequence<char*, std::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&) (tests/common/IO.h:62)
+           n1: 352742754 0x406E92: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)10> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, std::is_same<cpdd::PointType<long, (unsigned char)10>, char>::value>&, int, bool) (tests/testFramework.h:101)
+            n0: 352742754 0x404EB1: main (tests/cgal.cpp:407)
+ n0: 79853 in 26 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=2151116344
+mem_heap_B=1185565385
+mem_heap_extra_B=3455
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2503859712
+mem_heap_B=832822631
+mem_heap_extra_B=2841
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2983861704
+mem_heap_B=1312822639
+mem_heap_extra_B=4825
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=4583865744
+mem_heap_B=2912822647
+mem_heap_extra_B=8857
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=4583865744
+mem_heap_B=2912822647
+mem_heap_extra_B=8857
+mem_stacks_B=0
+heap_tree=detailed
+n5: 2912822647 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1600000008 0x412BB6: allocate (new_allocator.h:151)
+  n1: 1600000008 0x412BB6: allocate (allocator.h:198)
+   n1: 1600000008 0x412BB6: allocate (alloc_traits.h:482)
+    n1: 1600000008 0x412BB6: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 1600000008 0x412BB6: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 1600000008 0x412BB6: ensure_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:546)
+       n1: 1600000008 0x412BB6: parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, false>::resize(unsigned long, cpdd::PointType<long, (unsigned char)10> const&) (parlaylib/include/parlay/internal/delayed/../../sequence.h:359)
+        n1: 1600000008 0x40707B: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)10> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, std::is_same<cpdd::PointType<long, (unsigned char)10>, char>::value>&, int, bool) (tests/testFramework.h:115)
+         n0: 1600000008 0x404EB1: main (tests/cgal.cpp:407)
+ n1: 480000024 0x412955: allocate (new_allocator.h:151)
+  n1: 480000024 0x412955: allocate (allocator.h:198)
+   n1: 480000024 0x412955: allocate (alloc_traits.h:482)
+    n1: 480000024 0x412955: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 480000024 0x412955: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 480000024 0x412955: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 480000024 0x412955: sequence<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+        n1: 480000024 0x412955: from_function<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+         n1: 480000024 0x412955: tabulate<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+          n1: 480000024 0x412955: parlay::sequence<char*, std::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&) (tests/common/IO.h:69)
+           n1: 480000024 0x406E92: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)10> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, std::is_same<cpdd::PointType<long, (unsigned char)10>, char>::value>&, int, bool) (tests/testFramework.h:101)
+            n0: 480000024 0x404EB1: main (tests/cgal.cpp:407)
+ n1: 480000008 0x40703C: allocate (new_allocator.h:151)
+  n1: 480000008 0x40703C: allocate (allocator.h:198)
+   n1: 480000008 0x40703C: allocate (alloc_traits.h:482)
+    n1: 480000008 0x40703C: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 480000008 0x40703C: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 480000008 0x40703C: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 480000008 0x40703C: sequence<(lambda at /home/zmen002/KDtree/tests/testFramework.h:109:38)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+        n1: 480000008 0x40703C: from_function<(lambda at /home/zmen002/KDtree/tests/testFramework.h:109:38)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+         n1: 480000008 0x40703C: tabulate<(lambda at /home/zmen002/KDtree/tests/testFramework.h:109:38)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+          n1: 480000008 0x40703C: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)10> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, std::is_same<cpdd::PointType<long, (unsigned char)10>, char>::value>&, int, bool) (tests/testFramework.h:109)
+           n0: 480000008 0x404EB1: main (tests/cgal.cpp:407)
+ n1: 352742754 0x4030EC: allocate (new_allocator.h:151)
+  n1: 352742754 0x4030EC: allocate (allocator.h:198)
+   n1: 352742754 0x4030EC: allocate (alloc_traits.h:482)
+    n1: 352742754 0x4030EC: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 352742754 0x4030EC: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 352742754 0x4030EC: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:523)
+       n1: 352742754 0x4030EC: initialize_fill (parlaylib/include/parlay/internal/delayed/../../sequence.h:543)
+        n1: 352742754 0x4030EC: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:203)
+         n1: 352742754 0x4030EC: benchIO::readStringFromFile(char const*) (tests/common/IO.h:194)
+          n1: 352742754 0x406E85: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)10> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)10>, std::allocator<cpdd::PointType<long, (unsigned char)10> >, std::is_same<cpdd::PointType<long, (unsigned char)10>, char>::value>&, int, bool) (tests/testFramework.h:100)
+           n0: 352742754 0x404EB1: main (tests/cgal.cpp:407)
+ n0: 79853 in 28 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=5063867736
+mem_heap_B=2432822639
+mem_heap_extra_B=6873
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=5543869728
+mem_heap_B=1952822615
+mem_heap_extra_B=4905
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=5896613096
+mem_heap_B=1600079861
+mem_heap_extra_B=4291
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=6376615088
+mem_heap_B=2080079869
+mem_heap_extra_B=6275
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=7976619128
+mem_heap_B=480079861
+mem_heap_extra_B=2243
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=8279303416
+mem_heap_B=725689229
+mem_heap_extra_B=57077163
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=8606667416
+mem_heap_B=922107629
+mem_heap_extra_B=188022763
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=8834521416
+mem_heap_B=1058820029
+mem_heap_extra_B=279164363
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=9175667448
+mem_heap_B=1148765453
+mem_heap_extra_B=339127979
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=9410245448
+mem_heap_B=1176914813
+mem_heap_extra_B=357894219
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=9685787448
+mem_heap_B=1209979853
+mem_heap_extra_B=379937579
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=10022301448
+mem_heap_B=1250361533
+mem_heap_extra_B=406858699
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=10221421448
+mem_heap_B=1274255933
+mem_heap_extra_B=422788299
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=10437305448
+mem_heap_B=1300162013
+mem_heap_extra_B=440059019
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=10683845448
+mem_heap_B=1329746813
+mem_heap_extra_B=459782219
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=10959383448
+mem_heap_B=1362811373
+mem_heap_extra_B=481825259
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=11256145448
+mem_heap_B=1398422813
+mem_heap_extra_B=505566219
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=11570725448
+mem_heap_B=1436172413
+mem_heap_extra_B=530732619
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=11920015448
+mem_heap_B=1478087213
+mem_heap_extra_B=558675819
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=12306197448
+mem_heap_B=1524429053
+mem_heap_extra_B=589570379
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=12522079448
+mem_heap_B=1550334893
+mem_heap_extra_B=606840939
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=12749931448
+mem_heap_B=1577677133
+mem_heap_extra_B=625069099
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=13096623160
+mem_heap_B=1760079861
+mem_heap_extra_B=640006243
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=13372159000
+mem_heap_B=1920081989
+mem_heap_extra_B=640008595
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=13647698600
+mem_heap_B=1920081701
+mem_heap_extra_B=640008547
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=13848016200
+mem_heap_B=1920081221
+mem_heap_extra_B=640008467
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=14150698552
+mem_heap_B=2165687397
+mem_heap_extra_B=697081843
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=14465276552
+mem_heap_B=2354434197
+mem_heap_extra_B=822913043
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=14808019592
+mem_heap_B=2560080021
+mem_heap_extra_B=960010259
+mem_stacks_B=0
+heap_tree=peak
+n9: 2560080021 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 480000008 0x405BFD: allocate (new_allocator.h:151)
+  n1: 480000008 0x405BFD: allocate (allocator.h:198)
+   n1: 480000008 0x405BFD: allocate (alloc_traits.h:482)
+    n1: 480000008 0x405BFD: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 480000008 0x405BFD: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 480000008 0x405BFD: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 480000008 0x405BFD: sequence<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+        n1: 480000008 0x405BFD: from_function<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+         n1: 480000008 0x405BFD: tabulate<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+          n0: 480000008 0x405BFD: main (tests/cgal.cpp:441)
+ n1: 480000000 0x4164F9: allocate (new_allocator.h:151)
+  n1: 480000000 0x4164F9: allocate (allocator.h:198)
+   n1: 480000000 0x4164F9: Handle_for (cgal/include/CGAL/Handle_for.h:77)
+    n1: 480000000 0x4164F9: PointCd2 (cgal/include/CGAL/Kernel_d/PointCd.h:60)
+     n1: 480000000 0x4164F9: Point_d (cgal/include/CGAL/Kernel_d/Point_d.h:53)
+      n1: 480000000 0x4164F9: _Construct<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > (stl_construct.h:119)
+       n1: 480000000 0x4164F9: __uninit_default_n<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > *, unsigned long> (stl_uninitialized.h:643)
+        n2: 480000000 0x4164F9: CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >* std::__uninitialized_default_n<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >*, unsigned long>(CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >*, unsigned long) (stl_uninitialized.h:710)
+         n1: 480000000 0x41F7D7: __uninitialized_default_n_a<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > *, unsigned long, CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > (stl_uninitialized.h:779)
+          n1: 480000000 0x41F7D7: std::vector<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >, std::allocator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > >::_M_default_append(unsigned long) (vector.tcc:668)
+           n1: 480000000 0x4148F5: resize (stl_vector.h:1013)
+            n1: 480000000 0x4148F5: void CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >::build<CGAL::Parallel_tag>() (cgal/include/CGAL/Kd_tree.h:353)
+             n1: 480000000 0x4093C0: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:91)
+              n0: 480000000 0x4060AD: main (tests/cgal.cpp:445)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 480000000 0x416734: allocate (new_allocator.h:151)
+  n1: 480000000 0x416734: allocate (allocator.h:198)
+   n1: 480000000 0x416734: Handle_for (cgal/include/CGAL/Handle_for.h:77)
+    n1: 480000000 0x416734: CGAL::PointCd2<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >::PointCd2<long*>(int, long*, long*) (cgal/include/CGAL/Kernel_d/PointCd.h:65)
+     n1: 480000000 0x421926: Point_d<long *> (cgal/include/CGAL/Kernel_d/Point_d.h:67)
+      n1: 480000000 0x421926: testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&)::{lambda(unsigned long)#1}::operator()(unsigned long) const (tests/cgal.cpp:81)
+       n1: 480000000 0x40931A: parallel_for<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:79:30)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+        n1: 480000000 0x40931A: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:79)
+         n0: 480000000 0x4060AD: main (tests/cgal.cpp:445)
+ n1: 480000000 0x416752: allocate (new_allocator.h:151)
+  n1: 480000000 0x416752: allocate (allocator.h:198)
+   n1: 480000000 0x416752: allocate_vec_space (cgal/include/CGAL/Kernel_d/Vector__.h:100)
+    n1: 480000000 0x416752: Vector_ (cgal/include/CGAL/Kernel_d/Vector__.h:182)
+     n1: 480000000 0x416752: Tuple_d (cgal/include/CGAL/Kernel_d/Tuple_d.h:44)
+      n1: 480000000 0x416752: RefCounted<CGAL::Tuple_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > (cgal/include/CGAL/Handle_for.h:45)
+       n1: 480000000 0x416752: Handle_for (cgal/include/CGAL/Handle_for.h:78)
+        n1: 480000000 0x416752: CGAL::PointCd2<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >::PointCd2<long*>(int, long*, long*) (cgal/include/CGAL/Kernel_d/PointCd.h:65)
+         n1: 480000000 0x421926: Point_d<long *> (cgal/include/CGAL/Kernel_d/Point_d.h:67)
+          n1: 480000000 0x421926: testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&)::{lambda(unsigned long)#1}::operator()(unsigned long) const (tests/cgal.cpp:81)
+           n1: 480000000 0x40931A: parallel_for<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:79:30)> (parlaylib/include/parlay/internal/delayed/../../internal/scheduler_plugins/sequential.h:25)
+            n1: 480000000 0x40931A: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:79)
+             n0: 480000000 0x4060AD: main (tests/cgal.cpp:445)
+ n1: 160000000 0x409248: allocate (new_allocator.h:151)
+  n1: 160000000 0x409248: allocate (allocator.h:198)
+   n1: 160000000 0x409248: allocate (alloc_traits.h:482)
+    n1: 160000000 0x409248: _M_allocate (stl_vector.h:378)
+     n1: 160000000 0x409248: _M_create_storage (stl_vector.h:395)
+      n1: 160000000 0x409248: _Vector_base (stl_vector.h:332)
+       n1: 160000000 0x409248: vector (stl_vector.h:554)
+        n1: 160000000 0x409248: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:77)
+         n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n1: 160000000 0x4141CA: allocate (new_allocator.h:151)
+  n1: 160000000 0x4141CA: allocate (allocator.h:198)
+   n1: 160000000 0x4141CA: allocate (alloc_traits.h:482)
+    n1: 160000000 0x4141CA: _M_allocate (stl_vector.h:378)
+     n1: 160000000 0x4141CA: _M_range_initialize<__gnu_cxx::__normal_iterator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > *, std::vector<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >, std::allocator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > > > > (stl_vector.h:1689)
+      n1: 160000000 0x4141CA: vector<__gnu_cxx::__normal_iterator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > *, std::vector<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >, std::allocator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > > >, void> (stl_vector.h:708)
+       n1: 160000000 0x4141CA: CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >::Kd_tree<__gnu_cxx::__normal_iterator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >*, std::vector<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >, std::allocator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > > > >(__gnu_cxx::__normal_iterator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >*, std::vector<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >, std::allocator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > > >, __gnu_cxx::__normal_iterator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >*, std::vector<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >, std::allocator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > > >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>) (cgal/include/CGAL/Kd_tree.h:287)
+        n1: 160000000 0x4093B3: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:90)
+         n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n1: 160000000 0x41430F: allocate (new_allocator.h:151)
+  n1: 160000000 0x41430F: allocate (allocator.h:198)
+   n1: 160000000 0x41430F: allocate (alloc_traits.h:482)
+    n1: 160000000 0x41430F: _M_allocate (stl_vector.h:378)
+     n1: 160000000 0x41430F: reserve (vector.tcc:79)
+      n1: 160000000 0x41430F: void CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >::build<CGAL::Parallel_tag>() (cgal/include/CGAL/Kd_tree.h:332)
+       n1: 160000000 0x4093C0: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:91)
+        n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n1: 160000000 0x41F7A9: allocate (new_allocator.h:151)
+  n1: 160000000 0x41F7A9: allocate (allocator.h:198)
+   n1: 160000000 0x41F7A9: allocate (alloc_traits.h:482)
+    n1: 160000000 0x41F7A9: _M_allocate (stl_vector.h:378)
+     n1: 160000000 0x41F7A9: std::vector<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > >, std::allocator<CGAL::Point_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > > > > >::_M_default_append(unsigned long) (vector.tcc:663)
+      n1: 160000000 0x4148F5: resize (stl_vector.h:1013)
+       n1: 160000000 0x4148F5: void CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >::build<CGAL::Parallel_tag>() (cgal/include/CGAL/Kd_tree.h:353)
+        n1: 160000000 0x4093C0: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:91)
+         n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n0: 80013 in 39 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=15149164512
+mem_heap_B=2355393069
+mem_heap_extra_B=823552291
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=15491906512
+mem_heap_B=2149747869
+mem_heap_extra_B=686455491
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=15768021696
+mem_heap_B=1920079925
+mem_heap_extra_B=640008251
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=16088025760
+mem_heap_B=1920079861
+mem_heap_extra_B=640008235
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=16440776368
+mem_heap_B=1644430701
+mem_heap_extra_B=562906787
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=16793624368
+mem_heap_B=1432721901
+mem_heap_extra_B=421767587
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=17149128368
+mem_heap_B=1219419501
+mem_heap_extra_B=279565987
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=17535308368
+mem_heap_B=987711501
+mem_heap_extra_B=125093987
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=17848026368
+mem_heap_B=800080701
+mem_heap_extra_B=6787
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=17848026408
+mem_heap_B=800080677
+mem_heap_extra_B=6771
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=17848026448
+mem_heap_B=800080653
+mem_heap_extra_B=6755
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=17848026488
+mem_heap_B=800080629
+mem_heap_extra_B=6739
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=17848026528
+mem_heap_B=800080605
+mem_heap_extra_B=6723
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=17848026568
+mem_heap_B=800080581
+mem_heap_extra_B=6707
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=17848026608
+mem_heap_B=800080557
+mem_heap_extra_B=6691
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=17848026648
+mem_heap_B=800080533
+mem_heap_extra_B=6675
+mem_stacks_B=0
+heap_tree=detailed
+n4: 800080533 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 480000008 0x405BFD: allocate (new_allocator.h:151)
+  n1: 480000008 0x405BFD: allocate (allocator.h:198)
+   n1: 480000008 0x405BFD: allocate (alloc_traits.h:482)
+    n1: 480000008 0x405BFD: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 480000008 0x405BFD: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 480000008 0x405BFD: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 480000008 0x405BFD: sequence<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+        n1: 480000008 0x405BFD: from_function<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+         n1: 480000008 0x405BFD: tabulate<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+          n0: 480000008 0x405BFD: main (tests/cgal.cpp:441)
+ n1: 160000000 0x409248: allocate (new_allocator.h:151)
+  n1: 160000000 0x409248: allocate (allocator.h:198)
+   n1: 160000000 0x409248: allocate (alloc_traits.h:482)
+    n1: 160000000 0x409248: _M_allocate (stl_vector.h:378)
+     n1: 160000000 0x409248: _M_create_storage (stl_vector.h:395)
+      n1: 160000000 0x409248: _Vector_base (stl_vector.h:332)
+       n1: 160000000 0x409248: vector (stl_vector.h:554)
+        n1: 160000000 0x409248: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:77)
+         n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n1: 160000000 0x409726: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:148)
+  n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n0: 80525 in 45 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=17848026688
+mem_heap_B=800080509
+mem_heap_extra_B=6659
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=17848026728
+mem_heap_B=800080485
+mem_heap_extra_B=6643
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=17848026768
+mem_heap_B=800080461
+mem_heap_extra_B=6627
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=17848026808
+mem_heap_B=800080437
+mem_heap_extra_B=6611
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=17848026848
+mem_heap_B=800080413
+mem_heap_extra_B=6595
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=17848026888
+mem_heap_B=800080389
+mem_heap_extra_B=6579
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=17848026928
+mem_heap_B=800080365
+mem_heap_extra_B=6563
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=17848026968
+mem_heap_B=800080341
+mem_heap_extra_B=6547
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=17848027008
+mem_heap_B=800080317
+mem_heap_extra_B=6531
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=17848027048
+mem_heap_B=800080293
+mem_heap_extra_B=6515
+mem_stacks_B=0
+heap_tree=detailed
+n4: 800080293 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 480000008 0x405BFD: allocate (new_allocator.h:151)
+  n1: 480000008 0x405BFD: allocate (allocator.h:198)
+   n1: 480000008 0x405BFD: allocate (alloc_traits.h:482)
+    n1: 480000008 0x405BFD: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 480000008 0x405BFD: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 480000008 0x405BFD: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 480000008 0x405BFD: sequence<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+        n1: 480000008 0x405BFD: from_function<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+         n1: 480000008 0x405BFD: tabulate<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+          n0: 480000008 0x405BFD: main (tests/cgal.cpp:441)
+ n1: 160000000 0x409248: allocate (new_allocator.h:151)
+  n1: 160000000 0x409248: allocate (allocator.h:198)
+   n1: 160000000 0x409248: allocate (alloc_traits.h:482)
+    n1: 160000000 0x409248: _M_allocate (stl_vector.h:378)
+     n1: 160000000 0x409248: _M_create_storage (stl_vector.h:395)
+      n1: 160000000 0x409248: _Vector_base (stl_vector.h:332)
+       n1: 160000000 0x409248: vector (stl_vector.h:554)
+        n1: 160000000 0x409248: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:77)
+         n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n1: 160000000 0x409726: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:148)
+  n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n0: 80285 in 45 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=67
+#-----------
+time=17848027088
+mem_heap_B=800080269
+mem_heap_extra_B=6499
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=17848027128
+mem_heap_B=800080245
+mem_heap_extra_B=6483
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=17848027168
+mem_heap_B=800080221
+mem_heap_extra_B=6467
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=17848027208
+mem_heap_B=800080197
+mem_heap_extra_B=6451
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=17848027248
+mem_heap_B=800080173
+mem_heap_extra_B=6435
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=17848027288
+mem_heap_B=800080149
+mem_heap_extra_B=6419
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=17848027328
+mem_heap_B=800080125
+mem_heap_extra_B=6403
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=17848027368
+mem_heap_B=800080101
+mem_heap_extra_B=6387
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=17848027408
+mem_heap_B=800080077
+mem_heap_extra_B=6371
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=17848027448
+mem_heap_B=800080053
+mem_heap_extra_B=6355
+mem_stacks_B=0
+heap_tree=detailed
+n4: 800080053 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 480000008 0x405BFD: allocate (new_allocator.h:151)
+  n1: 480000008 0x405BFD: allocate (allocator.h:198)
+   n1: 480000008 0x405BFD: allocate (alloc_traits.h:482)
+    n1: 480000008 0x405BFD: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+     n1: 480000008 0x405BFD: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+      n1: 480000008 0x405BFD: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+       n1: 480000008 0x405BFD: sequence<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+        n1: 480000008 0x405BFD: from_function<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+         n1: 480000008 0x405BFD: tabulate<(lambda at /home/zmen002/KDtree/tests/cgal.cpp:441:36)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+          n0: 480000008 0x405BFD: main (tests/cgal.cpp:441)
+ n1: 160000000 0x409248: allocate (new_allocator.h:151)
+  n1: 160000000 0x409248: allocate (allocator.h:198)
+   n1: 160000000 0x409248: allocate (alloc_traits.h:482)
+    n1: 160000000 0x409248: _M_allocate (stl_vector.h:378)
+     n1: 160000000 0x409248: _M_create_storage (stl_vector.h:395)
+      n1: 160000000 0x409248: _Vector_base (stl_vector.h:332)
+       n1: 160000000 0x409248: vector (stl_vector.h:554)
+        n1: 160000000 0x409248: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:77)
+         n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n1: 160000000 0x409726: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:148)
+  n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n0: 80045 in 45 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=77
+#-----------
+time=17848027488
+mem_heap_B=800080029
+mem_heap_extra_B=6339
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=17848027528
+mem_heap_B=800080005
+mem_heap_extra_B=6323
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=17848027568
+mem_heap_B=800079981
+mem_heap_extra_B=6307
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=17848027608
+mem_heap_B=800079957
+mem_heap_extra_B=6291
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=17848027648
+mem_heap_B=800079933
+mem_heap_extra_B=6275
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=17848027688
+mem_heap_B=800079909
+mem_heap_extra_B=6259
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=17848027728
+mem_heap_B=800079885
+mem_heap_extra_B=6243
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=17848027768
+mem_heap_B=800079861
+mem_heap_extra_B=6227
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=18008029760
+mem_heap_B=640079861
+mem_heap_extra_B=4235
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=18488031752
+mem_heap_B=160079853
+mem_heap_extra_B=2251
+mem_stacks_B=0
+heap_tree=detailed
+n2: 160079853 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 160000000 0x409726: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:148)
+  n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n0: 79853 in 47 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=87
+#-----------
+time=18488031824
+mem_heap_B=160079801
+mem_heap_extra_B=2231
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=18488031976
+mem_heap_B=160079670
+mem_heap_extra_B=2210
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=18488032256
+mem_heap_B=160079406
+mem_heap_extra_B=2194
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=18488032536
+mem_heap_B=160079142
+mem_heap_extra_B=2178
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=18488032816
+mem_heap_B=160078878
+mem_heap_extra_B=2162
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=18488032856
+mem_heap_B=160078857
+mem_heap_extra_B=2143
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=18488032896
+mem_heap_B=160078836
+mem_heap_extra_B=2124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=18488033032
+mem_heap_B=160078708
+mem_heap_extra_B=2116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=18488105744
+mem_heap_B=160006004
+mem_heap_extra_B=2108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=96
+#-----------
+time=18488109848
+mem_heap_B=160001908
+mem_heap_extra_B=2100
+mem_stacks_B=0
+heap_tree=detailed
+n2: 160001908 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 160000000 0x409726: void testCGALParallel<CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> >, CGAL::Orthogonal_k_neighbor_search<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Euclidean_distance<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag> >, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, CGAL::Kd_tree<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Median_of_rectangle<CGAL::Search_traits_d<CGAL::Cartesian_d<long, CGAL::Linear_algebraCd<long, std::allocator<long> > >, CGAL::Dynamic_dimension_tag>, CGAL::Plane_separator<long> >, std::integral_constant<bool, true>, std::integral_constant<bool, false> > >, cpdd::PointType<long, (unsigned char)3> >(int, int, parlay::sequence<cpdd::PointType<long, (unsigned char)3>, std::allocator<cpdd::PointType<long, (unsigned char)3> >, std::is_same<cpdd::PointType<long, (unsigned char)3>, char>::value>&, int, int, int const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int const&, int const&) (tests/cgal.cpp:148)
+  n0: 160000000 0x4060AD: main (tests/cgal.cpp:445)
+ n0: 1908 in 47 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=97
+#-----------
+time=18488110016
+mem_heap_B=160001756
+mem_heap_extra_B=2084
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=98
+#-----------
+time=18488110184
+mem_heap_B=160001604
+mem_heap_extra_B=2068
+mem_stacks_B=0
+heap_tree=empty

@@ -1,0 +1,1057 @@
+desc: --time-unit=B --massif-out-file=test_mem_200.out
+cmd: ./../build/test -p /localdata/zmen002/kdtree/ss_varden/20000000_3/1.in -d 3 -k 10 -t 0 -q 0 -i 0
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=72712
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=72752
+mem_heap_B=72725
+mem_heap_extra_B=27
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=72792
+mem_heap_B=72746
+mem_heap_extra_B=46
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=72944
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=73096
+mem_heap_B=73008
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=73168
+mem_heap_B=73060
+mem_heap_extra_B=108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=73168
+mem_heap_B=73060
+mem_heap_extra_B=108
+mem_stacks_B=0
+heap_tree=detailed
+n2: 73060 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x50F5C19: pool (eh_alloc.cc:123)
+  n1: 72704 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+   n1: 72704 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x4009119: call_init.part.0 (dl-init.c:72)
+     n1: 72704 0x4009219: call_init (dl-init.c:118)
+      n1: 72704 0x4009219: _dl_init (dl-init.c:119)
+       n1: 72704 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+        n1: 72704 0xC: ???
+         n1: 72704 0x1FFEFFFC0E: ???
+          n1: 72704 0x1FFEFFFC1E: ???
+           n1: 72704 0x1FFEFFFC21: ???
+            n1: 72704 0x1FFEFFFC55: ???
+             n1: 72704 0x1FFEFFFC58: ???
+              n1: 72704 0x1FFEFFFC5A: ???
+               n1: 72704 0x1FFEFFFC5D: ???
+                n1: 72704 0x1FFEFFFC60: ???
+                 n1: 72704 0x1FFEFFFC63: ???
+                  n1: 72704 0x1FFEFFFC65: ???
+                   n1: 72704 0x1FFEFFFC68: ???
+                    n1: 72704 0x1FFEFFFC6A: ???
+                     n0: 72704 0x1FFEFFFC6D: ???
+ n0: 356 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=73240
+mem_heap_B=73008
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=73312
+mem_heap_B=73060
+mem_heap_extra_B=108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=73384
+mem_heap_B=73008
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=73536
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=73608
+mem_heap_B=72929
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=73680
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=73752
+mem_heap_B=72929
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=73824
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=73896
+mem_heap_B=72929
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=73968
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=detailed
+n2: 72877 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x50F5C19: pool (eh_alloc.cc:123)
+  n1: 72704 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+   n1: 72704 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x4009119: call_init.part.0 (dl-init.c:72)
+     n1: 72704 0x4009219: call_init (dl-init.c:118)
+      n1: 72704 0x4009219: _dl_init (dl-init.c:119)
+       n1: 72704 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+        n1: 72704 0xC: ???
+         n1: 72704 0x1FFEFFFC0E: ???
+          n1: 72704 0x1FFEFFFC1E: ???
+           n1: 72704 0x1FFEFFFC21: ???
+            n1: 72704 0x1FFEFFFC55: ???
+             n1: 72704 0x1FFEFFFC58: ???
+              n1: 72704 0x1FFEFFFC5A: ???
+               n1: 72704 0x1FFEFFFC5D: ???
+                n1: 72704 0x1FFEFFFC60: ???
+                 n1: 72704 0x1FFEFFFC63: ???
+                  n1: 72704 0x1FFEFFFC65: ???
+                   n1: 72704 0x1FFEFFFC68: ???
+                    n1: 72704 0x1FFEFFFC6A: ???
+                     n0: 72704 0x1FFEFFFC6D: ???
+ n0: 173 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=74040
+mem_heap_B=72929
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=74112
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=74184
+mem_heap_B=72929
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=74256
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=74328
+mem_heap_B=72929
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=74400
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=74472
+mem_heap_B=72929
+mem_heap_extra_B=87
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=74544
+mem_heap_B=72877
+mem_heap_extra_B=67
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=74568
+mem_heap_B=72885
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=74592
+mem_heap_B=72901
+mem_heap_extra_B=91
+mem_stacks_B=0
+heap_tree=detailed
+n2: 72901 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x50F5C19: pool (eh_alloc.cc:123)
+  n1: 72704 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+   n1: 72704 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x4009119: call_init.part.0 (dl-init.c:72)
+     n1: 72704 0x4009219: call_init (dl-init.c:118)
+      n1: 72704 0x4009219: _dl_init (dl-init.c:119)
+       n1: 72704 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+        n1: 72704 0xC: ???
+         n1: 72704 0x1FFEFFFC0E: ???
+          n1: 72704 0x1FFEFFFC1E: ???
+           n1: 72704 0x1FFEFFFC21: ???
+            n1: 72704 0x1FFEFFFC55: ???
+             n1: 72704 0x1FFEFFFC58: ???
+              n1: 72704 0x1FFEFFFC5A: ???
+               n1: 72704 0x1FFEFFFC5D: ???
+                n1: 72704 0x1FFEFFFC60: ???
+                 n1: 72704 0x1FFEFFFC63: ???
+                  n1: 72704 0x1FFEFFFC65: ???
+                   n1: 72704 0x1FFEFFFC68: ???
+                    n1: 72704 0x1FFEFFFC6A: ???
+                     n0: 72704 0x1FFEFFFC6D: ???
+ n0: 197 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=74616
+mem_heap_B=72893
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=74672
+mem_heap_B=72925
+mem_heap_extra_B=99
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=74696
+mem_heap_B=72909
+mem_heap_extra_B=91
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=74768
+mem_heap_B=72973
+mem_heap_extra_B=99
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=74824
+mem_heap_B=72941
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=74960
+mem_heap_B=73069
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=75032
+mem_heap_B=73005
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=75296
+mem_heap_B=73261
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=75432
+mem_heap_B=73133
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=75696
+mem_heap_B=73389
+mem_heap_extra_B=83
+mem_stacks_B=0
+heap_tree=detailed
+n2: 73389 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x50F5C19: pool (eh_alloc.cc:123)
+  n1: 72704 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+   n1: 72704 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x4009119: call_init.part.0 (dl-init.c:72)
+     n1: 72704 0x4009219: call_init (dl-init.c:118)
+      n1: 72704 0x4009219: _dl_init (dl-init.c:119)
+       n1: 72704 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+        n1: 72704 0xC: ???
+         n1: 72704 0x1FFEFFFC0E: ???
+          n1: 72704 0x1FFEFFFC1E: ???
+           n1: 72704 0x1FFEFFFC21: ???
+            n1: 72704 0x1FFEFFFC55: ???
+             n1: 72704 0x1FFEFFFC58: ???
+              n1: 72704 0x1FFEFFFC5A: ???
+               n1: 72704 0x1FFEFFFC5D: ???
+                n1: 72704 0x1FFEFFFC60: ???
+                 n1: 72704 0x1FFEFFFC63: ???
+                  n1: 72704 0x1FFEFFFC65: ???
+                   n1: 72704 0x1FFEFFFC68: ???
+                    n1: 72704 0x1FFEFFFC6A: ???
+                     n0: 72704 0x1FFEFFFC6D: ???
+ n0: 685 in 9 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=75864
+mem_heap_B=73541
+mem_heap_extra_B=99
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=75920
+mem_heap_B=73589
+mem_heap_extra_B=107
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=75944
+mem_heap_B=73605
+mem_heap_extra_B=115
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=75984
+mem_heap_B=73637
+mem_heap_extra_B=123
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=92488
+mem_heap_B=90085
+mem_heap_extra_B=179
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=97088
+mem_heap_B=94677
+mem_heap_extra_B=187
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=113608
+mem_heap_B=111125
+mem_heap_extra_B=259
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=130128
+mem_heap_B=127573
+mem_heap_extra_B=331
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=163096
+mem_heap_B=160469
+mem_heap_extra_B=403
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=196128
+mem_heap_B=193365
+mem_heap_extra_B=539
+mem_stacks_B=0
+heap_tree=detailed
+n7: 193365 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x50F5C19: pool (eh_alloc.cc:123)
+  n1: 72704 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+   n1: 72704 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x4009119: call_init.part.0 (dl-init.c:72)
+     n1: 72704 0x4009219: call_init (dl-init.c:118)
+      n1: 72704 0x4009219: _dl_init (dl-init.c:119)
+       n1: 72704 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+        n1: 72704 0xC: ???
+         n1: 72704 0x1FFEFFFC0E: ???
+          n1: 72704 0x1FFEFFFC1E: ???
+           n1: 72704 0x1FFEFFFC21: ???
+            n1: 72704 0x1FFEFFFC55: ???
+             n1: 72704 0x1FFEFFFC58: ???
+              n1: 72704 0x1FFEFFFC5A: ???
+               n1: 72704 0x1FFEFFFC5D: ???
+                n1: 72704 0x1FFEFFFC60: ???
+                 n1: 72704 0x1FFEFFFC63: ???
+                  n1: 72704 0x1FFEFFFC65: ???
+                   n1: 72704 0x1FFEFFFC68: ???
+                    n1: 72704 0x1FFEFFFC6A: ???
+                     n0: 72704 0x1FFEFFFC6D: ???
+ n1: 65792 0x41ABEB: parlay::ThreadSpecific<parlay::internal::block_allocator::local_list>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 65792 0x419648: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n2: 65792 0x419648: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:137)
+    n1: 32896 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+     n1: 32896 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+      n1: 32896 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+       n1: 32896 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+        n1: 32896 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+         n1: 32896 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+          n1: 32896 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+           n1: 32896 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+            n0: 32896 0x404B83: main (tests/test.cpp:298)
+    n1: 32896 0x4182FC: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+     n1: 32896 0x4182FC: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:428)
+      n1: 32896 0x4182FC: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+       n1: 32896 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+        n1: 32896 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+         n1: 32896 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+          n1: 32896 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+           n1: 32896 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+            n0: 32896 0x404B83: main (tests/test.cpp:298)
+ n1: 16448 0x418B68: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<void*>::Node, std::default_delete<parlay::internal::hazptr_stack<void*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x418715: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x418715: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x418715: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x418715: parlay::internal::hazptr_stack<void*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x41820B: make_unique<parlay::internal::hazptr_stack<void *>[]> (unique_ptr.h:1085)
+       n1: 16448 0x41820B: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:119)
+        n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+         n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+          n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+           n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+            n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+             n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n1: 16448 0x419DB8: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<std::byte*>::Node, std::default_delete<parlay::internal::hazptr_stack<std::byte*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x419855: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x419855: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x419855: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x419855: parlay::internal::hazptr_stack<std::byte*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x4195BE: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:132)
+       n1: 16448 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+        n1: 16448 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+         n1: 16448 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+          n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+           n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+            n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+             n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+              n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+               n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n1: 16448 0x41A6F8: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::Node, std::default_delete<parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x419965: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x419965: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x419965: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x419965: parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x4195CB: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:132)
+       n1: 16448 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+        n1: 16448 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+         n1: 16448 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+          n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+           n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+            n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+             n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+              n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+               n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n1: 4592 0x4182A4: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:425)
+  n1: 4592 0x4182A4: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+   n1: 4592 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+    n1: 4592 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+     n1: 4592 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+      n1: 4592 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+       n1: 4592 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+        n0: 4592 0x404B83: main (tests/test.cpp:298)
+ n0: 933 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=229096
+mem_heap_B=226261
+mem_heap_extra_B=611
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=262128
+mem_heap_B=259157
+mem_heap_extra_B=747
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=295096
+mem_heap_B=292053
+mem_heap_extra_B=819
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=328128
+mem_heap_B=324949
+mem_heap_extra_B=955
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=361096
+mem_heap_B=357845
+mem_heap_extra_B=1027
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=394128
+mem_heap_B=390741
+mem_heap_extra_B=1163
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=427096
+mem_heap_B=423637
+mem_heap_extra_B=1235
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=460128
+mem_heap_B=456533
+mem_heap_extra_B=1371
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=493096
+mem_heap_B=489429
+mem_heap_extra_B=1443
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=526128
+mem_heap_B=522325
+mem_heap_extra_B=1579
+mem_stacks_B=0
+heap_tree=detailed
+n6: 522325 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 394752 0x41ABEB: parlay::ThreadSpecific<parlay::internal::block_allocator::local_list>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 394752 0x419648: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n2: 394752 0x419648: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:137)
+    n1: 361856 0x4182FC: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+     n1: 361856 0x4182FC: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:428)
+      n1: 361856 0x4182FC: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+       n1: 361856 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+        n1: 361856 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+         n1: 361856 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+          n1: 361856 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+           n1: 361856 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+            n0: 361856 0x404B83: main (tests/test.cpp:298)
+    n1: 32896 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+     n1: 32896 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+      n1: 32896 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+       n1: 32896 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+        n1: 32896 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+         n1: 32896 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+          n1: 32896 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+           n1: 32896 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+            n0: 32896 0x404B83: main (tests/test.cpp:298)
+ n1: 72704 0x50F5C19: pool (eh_alloc.cc:123)
+  n1: 72704 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+   n1: 72704 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x4009119: call_init.part.0 (dl-init.c:72)
+     n1: 72704 0x4009219: call_init (dl-init.c:118)
+      n1: 72704 0x4009219: _dl_init (dl-init.c:119)
+       n1: 72704 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+        n1: 72704 0xC: ???
+         n1: 72704 0x1FFEFFFC0E: ???
+          n1: 72704 0x1FFEFFFC1E: ???
+           n1: 72704 0x1FFEFFFC21: ???
+            n1: 72704 0x1FFEFFFC55: ???
+             n1: 72704 0x1FFEFFFC58: ???
+              n1: 72704 0x1FFEFFFC5A: ???
+               n1: 72704 0x1FFEFFFC5D: ???
+                n1: 72704 0x1FFEFFFC60: ???
+                 n1: 72704 0x1FFEFFFC63: ???
+                  n1: 72704 0x1FFEFFFC65: ???
+                   n1: 72704 0x1FFEFFFC68: ???
+                    n1: 72704 0x1FFEFFFC6A: ???
+                     n0: 72704 0x1FFEFFFC6D: ???
+ n1: 16448 0x418B68: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<void*>::Node, std::default_delete<parlay::internal::hazptr_stack<void*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x418715: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x418715: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x418715: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x418715: parlay::internal::hazptr_stack<void*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x41820B: make_unique<parlay::internal::hazptr_stack<void *>[]> (unique_ptr.h:1085)
+       n1: 16448 0x41820B: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:119)
+        n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+         n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+          n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+           n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+            n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+             n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n1: 16448 0x419DB8: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<std::byte*>::Node, std::default_delete<parlay::internal::hazptr_stack<std::byte*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x419855: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x419855: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x419855: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x419855: parlay::internal::hazptr_stack<std::byte*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x4195BE: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:132)
+       n1: 16448 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+        n1: 16448 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+         n1: 16448 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+          n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+           n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+            n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+             n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+              n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+               n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n1: 16448 0x41A6F8: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::Node, std::default_delete<parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x419965: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x419965: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x419965: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x419965: parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x4195CB: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:132)
+       n1: 16448 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+        n1: 16448 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+         n1: 16448 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+          n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+           n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+            n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+             n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+              n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+               n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n0: 5525 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=559096
+mem_heap_B=555221
+mem_heap_extra_B=1651
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=592128
+mem_heap_B=588117
+mem_heap_extra_B=1787
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=592128
+mem_heap_B=588117
+mem_heap_extra_B=1787
+mem_stacks_B=0
+heap_tree=detailed
+n6: 588117 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 460544 0x41ABEB: parlay::ThreadSpecific<parlay::internal::block_allocator::local_list>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 460544 0x419648: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n2: 460544 0x419648: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:137)
+    n1: 427648 0x4182FC: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+     n1: 427648 0x4182FC: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:428)
+      n1: 427648 0x4182FC: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+       n1: 427648 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+        n1: 427648 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+         n1: 427648 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+          n1: 427648 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+           n1: 427648 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+            n0: 427648 0x404B83: main (tests/test.cpp:298)
+    n1: 32896 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+     n1: 32896 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+      n1: 32896 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+       n1: 32896 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+        n1: 32896 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+         n1: 32896 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+          n1: 32896 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+           n1: 32896 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+            n0: 32896 0x404B83: main (tests/test.cpp:298)
+ n1: 72704 0x50F5C19: pool (eh_alloc.cc:123)
+  n1: 72704 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+   n1: 72704 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+    n1: 72704 0x4009119: call_init.part.0 (dl-init.c:72)
+     n1: 72704 0x4009219: call_init (dl-init.c:118)
+      n1: 72704 0x4009219: _dl_init (dl-init.c:119)
+       n1: 72704 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+        n1: 72704 0xC: ???
+         n1: 72704 0x1FFEFFFC0E: ???
+          n1: 72704 0x1FFEFFFC1E: ???
+           n1: 72704 0x1FFEFFFC21: ???
+            n1: 72704 0x1FFEFFFC55: ???
+             n1: 72704 0x1FFEFFFC58: ???
+              n1: 72704 0x1FFEFFFC5A: ???
+               n1: 72704 0x1FFEFFFC5D: ???
+                n1: 72704 0x1FFEFFFC60: ???
+                 n1: 72704 0x1FFEFFFC63: ???
+                  n1: 72704 0x1FFEFFFC65: ???
+                   n1: 72704 0x1FFEFFFC68: ???
+                    n1: 72704 0x1FFEFFFC6A: ???
+                     n0: 72704 0x1FFEFFFC6D: ???
+ n1: 16448 0x418B68: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<void*>::Node, std::default_delete<parlay::internal::hazptr_stack<void*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x418715: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x418715: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x418715: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x418715: parlay::internal::hazptr_stack<void*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x41820B: make_unique<parlay::internal::hazptr_stack<void *>[]> (unique_ptr.h:1085)
+       n1: 16448 0x41820B: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:119)
+        n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+         n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+          n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+           n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+            n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+             n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n1: 16448 0x419DB8: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<std::byte*>::Node, std::default_delete<parlay::internal::hazptr_stack<std::byte*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x419855: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x419855: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x419855: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x419855: parlay::internal::hazptr_stack<std::byte*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x4195BE: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:132)
+       n1: 16448 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+        n1: 16448 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+         n1: 16448 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+          n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+           n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+            n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+             n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+              n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+               n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n1: 16448 0x41A6F8: parlay::ThreadSpecific<parlay::internal::intrusive_acquire_retire<parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::Node, std::default_delete<parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::Node>, 1ul>::ThreadData>::initialize() (parlaylib/include/parlay/internal/../thread_specific.h:405)
+  n1: 16448 0x419965: ThreadSpecific (parlaylib/include/parlay/internal/../thread_specific.h:169)
+   n1: 16448 0x419965: intrusive_acquire_retire (parlaylib/include/parlay/internal/concurrency/acquire_retire.h:79)
+    n1: 16448 0x419965: hazptr_instance (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:124)
+     n1: 16448 0x419965: parlay::internal::hazptr_stack<parlay::internal::block_allocator::block*>::hazptr_stack() (parlaylib/include/parlay/internal/concurrency/hazptr_stack.h:52)
+      n1: 16448 0x4195CB: parlay::internal::block_allocator::block_allocator(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long) (parlaylib/include/parlay/internal/block_allocator.h:132)
+       n1: 16448 0x4182C3: operator() (parlaylib/include/parlay/internal/pool_allocator.h:121)
+        n1: 16448 0x4182C3: make_unique_array<parlay::internal::block_allocator, (lambda at /home/zmen002/KDtree/parlaylib/include/parlay/internal/pool_allocator.h:120:80)> (parlaylib/include/parlay/utilities.h:426)
+         n1: 16448 0x4182C3: parlay::internal::pool_allocator::pool_allocator(std::vector<unsigned long, std::allocator<unsigned long> > const&) (parlaylib/include/parlay/internal/pool_allocator.h:120)
+          n1: 16448 0x417E31: parlay::internal::get_default_allocator() (parlaylib/include/parlay/alloc.h:62)
+           n1: 16448 0x404B83: allocator (parlaylib/include/parlay/alloc.h:182)
+            n1: 16448 0x404B83: storage_impl (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:116)
+             n1: 16448 0x404B83: sequence_base (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:582)
+              n1: 16448 0x404B83: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:107)
+               n0: 16448 0x404B83: main (tests/test.cpp:298)
+ n0: 5525 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=592392
+mem_heap_B=587861
+mem_heap_extra_B=1779
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=592464
+mem_heap_B=587913
+mem_heap_extra_B=1799
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=596568
+mem_heap_B=592009
+mem_heap_extra_B=1807
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=597072
+mem_heap_B=592497
+mem_heap_extra_B=1823
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=605272
+mem_heap_B=600689
+mem_heap_extra_B=1831
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=537476272
+mem_heap_B=537471601
+mem_heap_extra_B=1919
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=537476272
+mem_heap_B=537471601
+mem_heap_extra_B=1919
+mem_stacks_B=0
+heap_tree=peak
+n2: 537471601 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 536870912 0x420E9A: allocate_large (parlaylib/include/parlay/internal/pool_allocator.h:80)
+  n1: 536870912 0x420E9A: allocate (parlaylib/include/parlay/internal/pool_allocator.h:136)
+   n1: 536870912 0x420E9A: parlay::allocator<std::byte>::allocate(unsigned long) (parlaylib/include/parlay/alloc.h:167)
+    n1: 536870912 0x402CD8: allocate (alloc_traits.h:333)
+     n1: 536870912 0x402CD8: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+      n1: 536870912 0x402CD8: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+       n1: 536870912 0x402CD8: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:523)
+        n1: 536870912 0x402CD8: initialize_fill (parlaylib/include/parlay/internal/delayed/../../sequence.h:543)
+         n1: 536870912 0x402CD8: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:203)
+          n1: 536870912 0x402CD8: benchIO::readStringFromFile(char const*) (tests/common/IO.h:194)
+           n1: 536870912 0x407076: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:100)
+            n0: 536870912 0x404F73: main (tests/test.cpp:307)
+ n0: 600689 in 23 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=537484472
+mem_heap_B=537463409
+mem_heap_extra_B=1911
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=537484976
+mem_heap_B=537462921
+mem_heap_extra_B=1895
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1074355976
+mem_heap_B=1074333833
+mem_heap_extra_B=1983
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1078550368
+mem_heap_B=1078528137
+mem_heap_extra_B=2071
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=1078812616
+mem_heap_B=1078790281
+mem_heap_extra_B=2175
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=1078812656
+mem_heap_B=1078790305
+mem_heap_extra_B=2191
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=1615683656
+mem_heap_B=1615661217
+mem_heap_extra_B=2279
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=1615683712
+mem_heap_B=1615661241
+mem_heap_extra_B=2311
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=2152554712
+mem_heap_B=2152532153
+mem_heap_extra_B=2399
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=2152554768
+mem_heap_B=2152532177
+mem_heap_extra_B=2431
+mem_stacks_B=0
+heap_tree=detailed
+n2: 2152532177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2151677952 0x420E9A: allocate_large (parlaylib/include/parlay/internal/pool_allocator.h:80)
+  n1: 2151677952 0x420E9A: allocate (parlaylib/include/parlay/internal/pool_allocator.h:136)
+   n5: 2151677952 0x420E9A: parlay::allocator<std::byte>::allocate(unsigned long) (parlaylib/include/parlay/alloc.h:167)
+    n1: 536870912 0x402CD8: allocate (alloc_traits.h:333)
+     n1: 536870912 0x402CD8: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+      n1: 536870912 0x402CD8: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+       n1: 536870912 0x402CD8: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:523)
+        n1: 536870912 0x402CD8: initialize_fill (parlaylib/include/parlay/internal/delayed/../../sequence.h:543)
+         n1: 536870912 0x402CD8: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:203)
+          n1: 536870912 0x402CD8: benchIO::readStringFromFile(char const*) (tests/common/IO.h:194)
+           n1: 536870912 0x407076: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:100)
+            n0: 536870912 0x404F73: main (tests/test.cpp:307)
+    n1: 536870912 0x423AB0: allocate (alloc_traits.h:333)
+     n1: 536870912 0x423AB0: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+      n1: 536870912 0x423AB0: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+       n1: 536870912 0x423AB0: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+        n1: 536870912 0x423AB0: sequence<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+         n1: 536870912 0x423AB0: from_function<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+          n1: 536870912 0x423AB0: tabulate<(lambda at /home/zmen002/KDtree/tests/common/IO.h:69:48)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+           n1: 536870912 0x423AB0: parlay::sequence<char*, parlay::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, parlay::allocator<char>, true> >(parlay::sequence<char, parlay::allocator<char>, true>&) (tests/common/IO.h:69)
+            n1: 536870912 0x407083: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:101)
+             n0: 536870912 0x404F73: main (tests/test.cpp:307)
+    n1: 536870912 0x423E23: allocate (alloc_traits.h:333)
+     n1: 536870912 0x423E23: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+      n1: 536870912 0x423E23: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+       n1: 536870912 0x423E23: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+        n1: 536870912 0x423E23: parlay::sequence<bool, parlay::allocator<bool>, false>::sequence<benchIO::stringToWords<parlay::sequence<char, parlay::allocator<char>, true> >(parlay::sequence<char, parlay::allocator<char>, true>&)::{lambda(long)#2}>(unsigned long, parlay::sequence<char, parlay::allocator<char>, true>&&, parlay::sequence<bool, parlay::allocator<bool>, false>::_from_function_tag, unsigned long) (parlaylib/include/parlay/internal/delayed/../../sequence.h:516)
+         n1: 536870912 0x423A29: from_function<(lambda at /home/zmen002/KDtree/tests/common/IO.h:62:35)> (parlaylib/include/parlay/internal/delayed/../../sequence.h:475)
+          n1: 536870912 0x423A29: tabulate<(lambda at /home/zmen002/KDtree/tests/common/IO.h:62:35)> (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:30)
+           n1: 536870912 0x423A29: parlay::sequence<char*, parlay::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, parlay::allocator<char>, true> >(parlay::sequence<char, parlay::allocator<char>, true>&) (tests/common/IO.h:62)
+            n1: 536870912 0x407083: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:101)
+             n0: 536870912 0x404F73: main (tests/test.cpp:307)
+    n1: 536870912 0x42423B: allocate (alloc_traits.h:333)
+     n1: 536870912 0x42423B: create (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:284)
+      n1: 536870912 0x42423B: capacitated_buffer (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:303)
+       n1: 536870912 0x42423B: initialize_capacity (parlaylib/include/parlay/internal/delayed/../../internal/sequence_base.h:529)
+        n1: 536870912 0x42423B: sequence (parlaylib/include/parlay/internal/delayed/../../sequence.h:491)
+         n1: 536870912 0x42423B: uninitialized (parlaylib/include/parlay/internal/delayed/../../sequence.h:464)
+          n1: 536870912 0x42423B: parlay::sequence<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}>::value_type, parlay::allocator<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}>::value_type>, std::is_same<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}>::value_type, char>::value> parlay::internal::pack<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}>, parlay::slice<bool*, bool*> >(parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)#1}> const&, parlay::slice<bool*, bool*> const&, unsigned int) (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:327)
+           n1: 536870912 0x423A78: pack_index<long, parlay::slice<bool *, bool *> > (parlaylib/include/parlay/internal/delayed/../sequence_ops.h:418)
+            n1: 536870912 0x423A78: pack_index<long, parlay::sequence<bool, parlay::allocator<bool>, false> &> (parlaylib/include/parlay/primitives.h:250)
+             n1: 536870912 0x423A78: parlay::sequence<char*, parlay::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, parlay::allocator<char>, true> >(parlay::sequence<char, parlay::allocator<char>, true>&) (tests/common/IO.h:66)
+              n1: 536870912 0x407083: std::pair<unsigned long, int> read_points<cpdd::PointType<long, (unsigned char)15> >(char const*, parlay::sequence<cpdd::PointType<long, (unsigned char)15>, parlay::allocator<cpdd::PointType<long, (unsigned char)15> >, std::is_same<cpdd::PointType<long, (unsigned char)15>, char>::value>&, int, bool) (tests/testFramework.h:101)
+               n0: 536870912 0x404F73: main (tests/test.cpp:307)
+    n0: 4194304 in 1 place, below massif's threshold (1.00%)
+ n0: 854225 in 26 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=78
+#-----------
+time=2152554824
+mem_heap_B=2152532201
+mem_heap_extra_B=2463
+mem_stacks_B=0
+heap_tree=empty

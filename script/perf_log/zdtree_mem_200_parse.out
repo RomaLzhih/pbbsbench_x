@@ -1,0 +1,498 @@
+--------------------------------------------------------------------------------
+Command:            ./../build/zdtree -p /localdata/zmen002/kdtree/ss_varden/20000000_3/1.in -d 3 -k 10 -t 0 -q 0 -i 0
+Massif arguments:   --time-unit=B --massif-out-file=perf_log/zdtree_mem_200.out --detailed-freq=10
+ms_print arguments: perf_log/zdtree_mem_200.out
+--------------------------------------------------------------------------------
+
+
+    GB
+3.615^                                                  ##                    
+     |                                                 :# :                   
+     |                                                ::# ::                  
+     |                                            :: :::# :::                 
+     |                                            : ::::# ::::                
+     |                                     @@@  ::: ::::# :::::               
+     |                                     @  ::: : ::::# ::::::::::::::::::  
+     |                                     @  : : : ::::# ::::::              
+     |                                     @  : : : ::::# ::::::              
+     |                                     @  : : : ::::# ::::::              
+     |                                     @  : : : ::::# ::::::              
+     |                 @@@                 @  : : : ::::# ::::::              
+     |        @@@      @                   @  : : : ::::# ::::::              
+     |        @        @                   @  : : : ::::# ::::::              
+     |      ::@  :   ::@  ::               @  : : : ::::# ::::::              
+     |      : @  :   : @  :                @  : : : ::::# ::::::              
+     |      : @  ::::: @  : ::             @  : : : ::::# ::::::              
+     |   :::: @  ::  : @  : :              @  : : : ::::# ::::::              
+     |   :  : @  ::  : @  : : :::::::::::::@  : : : ::::# ::::::              
+     | :::  : @  ::  : @  : : :            @  : : : ::::# ::::::            : 
+   0 +----------------------------------------------------------------------->GB
+     0                                                                   13.07
+
+Number of snapshots: 68
+ Detailed snapshots: [9, 14, 19, 35 (peak), 57, 67]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1         87,376           85,808           85,691           117            0
+  2    352,830,744      352,829,176      352,828,445           731            0
+  3    352,839,448      352,820,472      352,819,765           707            0
+  4    705,582,816      705,563,840      705,562,519         1,321            0
+  5    708,344,072      708,319,672      708,318,335         1,337            0
+  6  1,188,346,064    1,188,321,664    1,188,318,359         3,305            0
+  7  1,191,101,896    1,185,565,832    1,185,562,543         3,289            0
+  8  1,671,103,888    1,665,567,824    1,665,562,567         5,257            0
+  9  1,671,103,888    1,665,567,824    1,665,562,567         5,257            0
+100.00% (1,665,562,567B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->100.00% (1,665,485,556B) 0x4D1778: std::__new_allocator<std::byte>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->28.82% (480,000,024B) 0x4D24FC: allocate (alloc_traits.h:482)
+| | ->28.82% (480,000,024B) 0x4D24FC: parlay::sequence_internal::sequence_base<char*, std::allocator<char*>, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->28.82% (480,000,024B) 0x4AC392: parlay::sequence_internal::sequence_base<char*, std::allocator<char*>, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->28.82% (480,000,024B) 0x4807DC: parlay::sequence_internal::sequence_base<char*, std::allocator<char*>, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->28.82% (480,000,024B) 0x453A45: parlay::sequence<char*, std::allocator<char*>, false>::sequence<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |         ->28.82% (480,000,024B) 0x43505D: parlay::sequence<char*, std::allocator<char*>, false> parlay::sequence<char*, std::allocator<char*>, false>::from_function<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |           ->28.82% (480,000,024B) 0x411AD4: auto parlay::internal::tabulate<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |             ->28.82% (480,000,024B) 0x411B83: parlay::sequence<char*, std::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&) (IO.h:69)
+| |               ->28.82% (480,000,024B) 0x40DF58: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:78)
+| |                 ->28.82% (480,000,024B) 0x404242: main (neighborsTime.C:132)
+| |                   
+| ->28.82% (480,000,024B) 0x4F5FF2: allocate (alloc_traits.h:482)
+| | ->28.82% (480,000,024B) 0x4F5FF2: parlay::sequence_internal::sequence_base<long, std::allocator<long>, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->28.82% (480,000,024B) 0x4D21FA: parlay::sequence_internal::sequence_base<long, std::allocator<long>, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->28.82% (480,000,024B) 0x4AC08C: parlay::sequence_internal::sequence_base<long, std::allocator<long>, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->28.82% (480,000,024B) 0x480433: parlay::sequence<long, std::allocator<long>, false>::sequence(unsigned long, parlay::sequence<long, std::allocator<long>, false>::_uninitialized_tag) (sequence.h:478)
+| |         ->28.82% (480,000,024B) 0x4535E0: parlay::sequence<long, std::allocator<long>, false>::uninitialized(unsigned long) (sequence.h:451)
+| |           ->28.82% (480,000,024B) 0x434EE3: parlay::sequence<parlay::delayed_sequence<long, long, parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int)::{lambda(unsigned long)
+| |             ->28.82% (480,000,024B) 0x411A04: auto parlay::internal::pack_index<long, parlay::slice<bool*, bool*> >(parlay::slice<bool*, bool*> const&, unsigned int) (sequence_ops.h:418)
+| |               ->28.82% (480,000,024B) 0x411A46: auto parlay::pack_index<long, parlay::sequence<bool, std::allocator<bool>, false>&>(parlay::sequence<bool, std::allocator<bool>, false>&) (primitives.h:246)
+| |                 ->28.82% (480,000,024B) 0x411B4F: parlay::sequence<char*, std::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&) (IO.h:66)
+| |                   ->28.82% (480,000,024B) 0x40DF58: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:78)
+| |                     ->28.82% (480,000,024B) 0x404242: main (neighborsTime.C:132)
+| |                       
+| ->21.18% (352,742,754B) 0x47E61A: allocate (alloc_traits.h:482)
+| | ->21.18% (352,742,754B) 0x47E61A: parlay::sequence_internal::sequence_base<char, std::allocator<char>, true>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->21.18% (352,742,754B) 0x450FE6: parlay::sequence_internal::sequence_base<char, std::allocator<char>, true>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->21.18% (352,742,754B) 0x432DFF: parlay::sequence_internal::sequence_base<char, std::allocator<char>, true>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:513)
+| |       ->21.18% (352,742,754B) 0x40F550: parlay::sequence<char, std::allocator<char>, true>::initialize_fill(unsigned long, char const&) (sequence.h:520)
+| |         ->21.18% (352,742,754B) 0x40BE87: parlay::sequence<char, std::allocator<char>, true>::sequence(unsigned long, char const&) (sequence.h:199)
+| |           ->21.18% (352,742,754B) 0x40388D: benchIO::readStringFromFile(char const*) (IO.h:194)
+| |             ->21.18% (352,742,754B) 0x40DF45: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:77)
+| |               ->21.18% (352,742,754B) 0x404242: main (neighborsTime.C:132)
+| |                 
+| ->21.18% (352,742,754B) 0x4D2080: allocate (alloc_traits.h:482)
+| | ->21.18% (352,742,754B) 0x4D2080: parlay::sequence_internal::sequence_base<bool, std::allocator<bool>, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->21.18% (352,742,754B) 0x4ABD84: parlay::sequence_internal::sequence_base<bool, std::allocator<bool>, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->21.18% (352,742,754B) 0x4800E0: parlay::sequence_internal::sequence_base<bool, std::allocator<bool>, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->21.18% (352,742,754B) 0x45319F: parlay::sequence<bool, std::allocator<bool>, false>::sequence<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |         ->21.18% (352,742,754B) 0x434946: parlay::sequence<bool, std::allocator<bool>, false> parlay::sequence<bool, std::allocator<bool>, false>::from_function<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |           ->21.18% (352,742,754B) 0x411953: auto parlay::internal::tabulate<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |             ->21.18% (352,742,754B) 0x411B3C: parlay::sequence<char*, std::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&) (IO.h:62)
+| |               ->21.18% (352,742,754B) 0x40DF58: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:78)
+| |                 ->21.18% (352,742,754B) 0x404242: main (neighborsTime.C:132)
+| |                   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (77,011B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 10  2,151,105,880    1,185,565,832    1,185,562,543         3,289            0
+ 11  2,503,849,248      832,822,464      832,819,789         2,675            0
+ 12  2,983,851,240    1,312,824,456    1,312,819,797         4,659            0
+ 13  3,463,853,232    1,792,826,448    1,792,819,805         6,643            0
+ 14  3,463,853,232    1,792,826,448    1,792,819,805         6,643            0
+100.00% (1,792,819,805B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->100.00% (1,792,742,794B) 0x4D1778: std::__new_allocator<std::byte>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->26.77% (480,000,024B) 0x4D24FC: allocate (alloc_traits.h:482)
+| | ->26.77% (480,000,024B) 0x4D24FC: parlay::sequence_internal::sequence_base<char*, std::allocator<char*>, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->26.77% (480,000,024B) 0x4AC392: parlay::sequence_internal::sequence_base<char*, std::allocator<char*>, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->26.77% (480,000,024B) 0x4807DC: parlay::sequence_internal::sequence_base<char*, std::allocator<char*>, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->26.77% (480,000,024B) 0x453A45: parlay::sequence<char*, std::allocator<char*>, false>::sequence<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |         ->26.77% (480,000,024B) 0x43505D: parlay::sequence<char*, std::allocator<char*>, false> parlay::sequence<char*, std::allocator<char*>, false>::from_function<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |           ->26.77% (480,000,024B) 0x411AD4: auto parlay::internal::tabulate<benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&)::{lambda(long)
+| |             ->26.77% (480,000,024B) 0x411B83: parlay::sequence<char*, std::allocator<char*>, false> benchIO::stringToWords<parlay::sequence<char, std::allocator<char>, true> >(parlay::sequence<char, std::allocator<char>, true>&) (IO.h:69)
+| |               ->26.77% (480,000,024B) 0x40DF58: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:78)
+| |                 ->26.77% (480,000,024B) 0x404242: main (neighborsTime.C:132)
+| |                   
+| ->26.77% (480,000,008B) 0x4D25C6: allocate (alloc_traits.h:482)
+| | ->26.77% (480,000,008B) 0x4D25C6: parlay::sequence_internal::sequence_base<double, std::allocator<double>, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->26.77% (480,000,008B) 0x4AC644: parlay::sequence_internal::sequence_base<double, std::allocator<double>, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->26.77% (480,000,008B) 0x480A80: parlay::sequence_internal::sequence_base<double, std::allocator<double>, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->26.77% (480,000,008B) 0x4692F5: parlay::sequence<double, std::allocator<double>, false>::sequence<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |         ->26.77% (480,000,008B) 0x442C11: parlay::sequence<double, std::allocator<double>, false> parlay::sequence<double, std::allocator<double>, false>::from_function<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |           ->26.77% (480,000,008B) 0x4220C9: auto parlay::internal::tabulate<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |             ->26.77% (480,000,008B) 0x4221F7: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>) (geometryIO.h:94)
+| |               ->26.77% (480,000,008B) 0x40DFA3: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:81)
+| |                 ->26.77% (480,000,008B) 0x404242: main (neighborsTime.C:132)
+| |                   
+| ->26.77% (480,000,008B) 0x4E488D: allocate (alloc_traits.h:482)
+| | ->26.77% (480,000,008B) 0x4E488D: parlay::sequence_internal::sequence_base<point3d<double>, std::allocator<point3d<double> >, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->26.77% (480,000,008B) 0x4BF5C2: parlay::sequence_internal::sequence_base<point3d<double>, std::allocator<point3d<double> >, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->26.77% (480,000,008B) 0x4963F8: parlay::sequence_internal::sequence_base<point3d<double>, std::allocator<point3d<double> >, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->26.77% (480,000,008B) 0x469439: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, false>::sequence<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |         ->26.77% (480,000,008B) 0x442CE2: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, false> parlay::sequence<point3d<double>, std::allocator<point3d<double> >, false>::from_function<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |           ->26.77% (480,000,008B) 0x422181: auto parlay::internal::tabulate<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |             ->26.77% (480,000,008B) 0x422220: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>) (geometryIO.h:96)
+| |               ->26.77% (480,000,008B) 0x40DFA3: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:81)
+| |                 ->26.77% (480,000,008B) 0x404242: main (neighborsTime.C:132)
+| |                   
+| ->19.68% (352,742,754B) 0x47E61A: allocate (alloc_traits.h:482)
+| | ->19.68% (352,742,754B) 0x47E61A: parlay::sequence_internal::sequence_base<char, std::allocator<char>, true>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->19.68% (352,742,754B) 0x450FE6: parlay::sequence_internal::sequence_base<char, std::allocator<char>, true>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->19.68% (352,742,754B) 0x432DFF: parlay::sequence_internal::sequence_base<char, std::allocator<char>, true>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:513)
+| |       ->19.68% (352,742,754B) 0x40F550: parlay::sequence<char, std::allocator<char>, true>::initialize_fill(unsigned long, char const&) (sequence.h:520)
+| |         ->19.68% (352,742,754B) 0x40BE87: parlay::sequence<char, std::allocator<char>, true>::sequence(unsigned long, char const&) (sequence.h:199)
+| |           ->19.68% (352,742,754B) 0x40388D: benchIO::readStringFromFile(char const*) (IO.h:194)
+| |             ->19.68% (352,742,754B) 0x40DF45: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:77)
+| |               ->19.68% (352,742,754B) 0x404242: main (neighborsTime.C:132)
+| |                 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (77,011B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 15  3,943,855,224    1,312,824,456    1,312,819,797         4,659            0
+ 16  4,423,857,216      832,822,464      832,819,773         2,691            0
+ 17  4,776,600,584      480,079,096      480,077,019         2,077            0
+ 18  7,336,604,624    3,040,083,136    3,040,077,027         6,109            0
+ 19  7,336,604,624    3,040,083,136    3,040,077,027         6,109            0
+100.00% (3,040,077,027B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->100.00% (3,040,000,016B) 0x4D1778: std::__new_allocator<std::byte>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->84.21% (2,560,000,008B) 0x4C5A08: allocate (alloc_traits.h:482)
+| | ->84.21% (2,560,000,008B) 0x4C5A08: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->84.21% (2,560,000,008B) 0x49D4B8: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->84.21% (2,560,000,008B) 0x4707D8: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->84.21% (2,560,000,008B) 0x4479EF: parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::sequence<timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int)::{lambda(unsigned long)
+| |         ->84.21% (2,560,000,008B) 0x427B5F: parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false> parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::from_function<timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int)::{lambda(unsigned long)
+| |           ->84.21% (2,560,000,008B) 0x40E48F: auto parlay::internal::tabulate<timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int)::{lambda(unsigned long)
+| |             ->84.21% (2,560,000,008B) 0x40E5E8: void timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int) (neighborsTime.C:63)
+| |               ->84.21% (2,560,000,008B) 0x40454E: main (neighborsTime.C:150)
+| |                 
+| ->15.79% (480,000,008B) 0x4E488D: allocate (alloc_traits.h:482)
+| | ->15.79% (480,000,008B) 0x4E488D: parlay::sequence_internal::sequence_base<point3d<double>, std::allocator<point3d<double> >, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->15.79% (480,000,008B) 0x4BF5C2: parlay::sequence_internal::sequence_base<point3d<double>, std::allocator<point3d<double> >, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->15.79% (480,000,008B) 0x4963F8: parlay::sequence_internal::sequence_base<point3d<double>, std::allocator<point3d<double> >, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->15.79% (480,000,008B) 0x469439: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, false>::sequence<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |         ->15.79% (480,000,008B) 0x442CE2: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, false> parlay::sequence<point3d<double>, std::allocator<point3d<double> >, false>::from_function<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |           ->15.79% (480,000,008B) 0x422181: auto parlay::internal::tabulate<benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>)::{lambda(unsigned long)
+| |             ->15.79% (480,000,008B) 0x422220: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> benchIO::parsePoints<point3d<double>, parlay::slice<char**, char**> >(parlay::slice<char**, char**>) (geometryIO.h:96)
+| |               ->15.79% (480,000,008B) 0x40DFA3: parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value> readGeneral<point3d<double> >(char const*) (neighborsTime.C:81)
+| |                 ->15.79% (480,000,008B) 0x404242: main (neighborsTime.C:132)
+| |                   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (77,011B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 20  7,816,606,616    2,560,081,144    2,560,077,019         4,125            0
+ 21  7,976,608,648    2,720,083,176    2,720,077,035         6,141            0
+ 22  7,976,931,496    2,720,083,176    2,720,077,035         6,141            0
+ 23  8,296,935,536    3,040,087,216    3,040,077,043        10,173            0
+ 24  8,297,150,272    3,040,301,952    3,040,291,747        10,205            0
+ 25  8,617,154,312    3,360,305,992    3,360,291,747        14,245            0
+ 26  8,666,099,288    3,360,305,992    3,360,291,747        14,245            0
+ 27  8,986,103,328    3,040,301,952    3,040,291,747        10,205            0
+ 28  9,086,716,424    3,140,485,496    3,136,988,219     3,497,277            0
+ 29  9,187,042,856    3,240,811,928    3,233,844,851     6,967,077            0
+ 30  9,269,036,952    3,322,806,024    3,312,985,315     9,820,709            0
+ 31  9,366,172,760    3,419,941,832    3,406,748,427    13,193,405            0
+ 32  9,493,629,944    3,547,399,016    3,529,785,475    17,613,541            0
+ 33  9,582,483,784    3,636,252,856    3,615,558,987    20,693,869            0
+ 34  9,725,840,584    3,779,609,656    3,753,997,667    25,611,989            0
+ 35  9,827,598,064    3,881,367,136    3,852,238,771    29,128,365            0
+99.25% (3,852,238,771B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->91.12% (3,536,580,832B) 0x4D1778: std::__new_allocator<std::byte>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->65.96% (2,560,000,016B) 0x4C5A08: allocate (alloc_traits.h:482)
+| | ->65.96% (2,560,000,016B) 0x4C5A08: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->65.96% (2,560,000,016B) 0x49D4B8: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->65.96% (2,560,000,016B) 0x4707D8: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->65.96% (2,560,000,008B) 0x4479EF: parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::sequence<timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int)::{lambda(unsigned long)
+| |       | ->65.96% (2,560,000,008B) 0x427B5F: parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false> parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, false>::from_function<timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int)::{lambda(unsigned long)
+| |       |   ->65.96% (2,560,000,008B) 0x40E48F: auto parlay::internal::tabulate<timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int)::{lambda(unsigned long)
+| |       |     ->65.96% (2,560,000,008B) 0x40E5E8: void timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int) (neighborsTime.C:63)
+| |       |       ->65.96% (2,560,000,008B) 0x40454E: main (neighborsTime.C:150)
+| |       |         
+| |       ->00.00% (8B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       
+| ->16.70% (648,290,408B) 0x5058E4: allocate (alloc_traits.h:482)
+| | ->16.70% (648,290,408B) 0x5058E4: parlay::sequence_internal::sequence_base<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::allocator<std::pair<unsigned long, vertex<point3d<double>, 10>*> >, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->16.70% (648,290,408B) 0x4EBD6A: parlay::sequence_internal::sequence_base<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::allocator<std::pair<unsigned long, vertex<point3d<double>, 10>*> >, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->16.70% (648,290,408B) 0x4C73B4: parlay::sequence_internal::sequence_base<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::allocator<std::pair<unsigned long, vertex<point3d<double>, 10>*> >, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->08.46% (328,290,400B) 0x49ECA0: parlay::sequence<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::allocator<std::pair<unsigned long, vertex<point3d<double>, 10>*> >, false>::initialize_default(unsigned long) (sequence.h:511)
+| |       | ->08.46% (328,290,400B) 0x471C23: parlay::sequence<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::allocator<std::pair<unsigned long, vertex<point3d<double>, 10>*> >, false>::sequence(unsigned long) (sequence.h:196)
+| |       |   ->08.46% (328,290,400B) 0x4EB798: oct_tree<vertex<point3d<double>, 10> >::node::node(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:206)
+| |       |     ->08.46% (328,290,400B) 0x4C6F22: oct_tree<vertex<point3d<double>, 10> >::node::new_leaf(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:229)
+| |       |       ->08.46% (328,290,400B) 0x49E625: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:628)
+| |       |         ->04.23% (164,298,512B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | ->04.23% (164,176,216B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | | ->04.23% (164,176,216B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |         | |   ->02.06% (79,877,904B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | ->02.05% (79,632,296B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | | ->02.05% (79,632,296B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |         | |   | |   ->01.01% (39,019,976B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | |   | ->01.01% (39,019,976B) in 2 places, all below massif's threshold (1.00%)
+| |       |         | |   | |   |   
+| |       |         | |   | |   ->01.00% (38,814,112B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | |   | ->01.00% (38,814,112B) in 2 places, all below massif's threshold (1.00%)
+| |       |         | |   | |   |   
+| |       |         | |   | |   ->00.05% (1,798,208B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | |   | |   
+| |       |         | |   | ->00.01% (245,608B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | |   | 
+| |       |         | |   ->02.06% (79,808,000B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | ->02.05% (79,556,880B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | | ->02.05% (79,556,880B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |         | |   | |   ->01.00% (38,896,512B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | |   | ->01.00% (38,896,512B) in 2 places, all below massif's threshold (1.00%)
+| |       |         | |   | |   |   
+| |       |         | |   | |   ->01.00% (38,885,584B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | |   | ->01.00% (38,885,584B) in 2 places, all below massif's threshold (1.00%)
+| |       |         | |   | |   |   
+| |       |         | |   | |   ->00.05% (1,774,784B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | |   | |   
+| |       |         | |   | ->00.01% (251,120B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | |   | 
+| |       |         | |   ->00.12% (4,490,312B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | |   
+| |       |         | ->00.00% (122,296B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | 
+| |       |         ->04.23% (163,991,888B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           ->04.22% (163,856,000B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           | ->04.22% (163,856,000B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |           |   ->02.06% (79,776,192B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | ->02.05% (79,547,288B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | | ->02.05% (79,547,288B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |           |   | |   ->01.04% (40,542,240B) in 2 places, all below massif's threshold (1.00%)
+| |       |           |   | |   | 
+| |       |           |   | |   ->01.00% (39,005,048B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | |     ->01.00% (39,005,048B) in 2 places, all below massif's threshold (1.00%)
+| |       |           |   | |       
+| |       |           |   | ->00.01% (228,904B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |           |   | 
+| |       |           |   ->02.05% (79,644,736B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | ->02.05% (79,417,512B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | | ->02.05% (79,417,512B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |           |   | |   ->01.04% (40,519,840B) in 2 places, all below massif's threshold (1.00%)
+| |       |           |   | |   | 
+| |       |           |   | |   ->01.00% (38,897,672B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | |     ->01.00% (38,897,672B) in 2 places, all below massif's threshold (1.00%)
+| |       |           |   | |       
+| |       |           |   | ->00.01% (227,224B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |           |   | 
+| |       |           |   ->00.11% (4,435,072B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |           |   
+| |       |           ->00.00% (135,888B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |           
+| |       ->08.24% (320,000,008B) 0x49EEBB: parlay::sequence<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::allocator<std::pair<unsigned long, vertex<point3d<double>, 10>*> >, false>::sequence(unsigned long, parlay::sequence<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::allocator<std::pair<unsigned long, vertex<point3d<double>, 10>*> >, false>::_uninitialized_tag) (sequence.h:478)
+| |       | ->08.24% (320,000,008B) 0x471F79: parlay::sequence<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::allocator<std::pair<unsigned long, vertex<point3d<double>, 10>*> >, false>::uninitialized(unsigned long) (sequence.h:451)
+| |       |   ->08.24% (320,000,008B) 0x49DFAD: auto parlay::internal::sample_sort<parlay::delayed_sequence<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::pair<unsigned long, vertex<point3d<double>, 10>*>, oct_tree<vertex<point3d<double>, 10> >::tag_points(parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>&)::{lambda(unsigned long)
+| |       |     ->08.24% (320,000,008B) 0x49E10E: auto parlay::sort<parlay::delayed_sequence<std::pair<unsigned long, vertex<point3d<double>, 10>*>, std::pair<unsigned long, vertex<point3d<double>, 10>*>, oct_tree<vertex<point3d<double>, 10> >::tag_points(parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>&)::{lambda(unsigned long)
+| |       |       ->08.24% (320,000,008B) 0x49E36A: oct_tree<vertex<point3d<double>, 10> >::tag_points(parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>&) (oct_tree.h:583)
+| |       |         ->08.24% (320,000,008B) 0x47134A: std::unique_ptr<oct_tree<vertex<point3d<double>, 10> >::node, oct_tree<vertex<point3d<double>, 10> >::delete_tree> oct_tree<vertex<point3d<double>, 10> >::build<parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false> >(parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>&) (oct_tree.h:530)
+| |       |           ->08.24% (320,000,008B) 0x448DE9: k_nearest_neighbors<vertex<point3d<double>, 10>, 10>::k_nearest_neighbors(parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>&, std::pair<point3d<double>, point3d<double> >) (k_nearest_neighbors.h:126)
+| |       |             ->08.24% (320,000,008B) 0x42AB56: void ANN<10, vertex<point3d<double>, 10> >(parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int, parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int) (neighbors.h:70)
+| |       |               ->08.24% (320,000,008B) 0x40E6C8: void timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int) (neighborsTime.C:73)
+| |       |                 ->08.24% (320,000,008B) 0x40454E: main (neighborsTime.C:150)
+| |       |                   
+| |       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       
+| ->08.46% (328,290,408B) 0x4CB6B0: allocate (alloc_traits.h:482)
+| | ->08.46% (328,290,408B) 0x4CB6B0: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>::storage_impl::capacitated_buffer::header::create(unsigned long, std::allocator<std::byte>&) (sequence_base.h:284)
+| |   ->08.46% (328,290,408B) 0x4A3ACA: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>::storage_impl::capacitated_buffer::capacitated_buffer(unsigned long, std::allocator<std::byte>&) (sequence_base.h:303)
+| |     ->08.46% (328,290,408B) 0x49D88A: parlay::sequence_internal::sequence_base<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>::storage_impl::initialize_capacity(unsigned long) (sequence_base.h:519)
+| |       ->04.34% (168,290,400B) 0x4CB0DC: parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>::initialize_default(unsigned long) (sequence.h:511)
+| |       | ->04.34% (168,290,400B) 0x4A2DFB: parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>::sequence(unsigned long) (sequence.h:196)
+| |       |   ->04.34% (168,290,400B) 0x4EB75B: oct_tree<vertex<point3d<double>, 10> >::node::node(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:205)
+| |       |     ->04.34% (168,290,400B) 0x4C6F22: oct_tree<vertex<point3d<double>, 10> >::node::new_leaf(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:229)
+| |       |       ->04.34% (168,290,400B) 0x49E625: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:628)
+| |       |         ->02.17% (84,223,512B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | ->02.17% (84,159,960B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | | ->02.17% (84,159,960B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |         | |   ->01.05% (40,942,792B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | ->01.05% (40,815,696B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | | ->01.05% (40,815,696B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |         | |   | |   ->01.05% (40,815,696B) in 3 places, all below massif's threshold (1.00%)
+| |       |         | |   | |     
+| |       |         | |   | ->00.00% (127,096B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | |   | 
+| |       |         | |   ->01.05% (40,905,856B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | ->01.05% (40,775,888B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | |   | | ->01.05% (40,775,888B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |         | |   | |   ->01.05% (40,775,888B) in 3 places, all below massif's threshold (1.00%)
+| |       |         | |   | |     
+| |       |         | |   | ->00.00% (129,968B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | |   | 
+| |       |         | |   ->00.06% (2,311,312B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | |   
+| |       |         | ->00.00% (63,552B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         | 
+| |       |         ->02.17% (84,066,888B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           ->02.16% (83,996,280B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           | ->02.16% (83,996,280B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |           |   ->01.05% (40,890,088B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | ->01.05% (40,771,592B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | | ->01.05% (40,771,592B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |           |   | |   ->01.05% (40,771,592B) in 3 places, all below massif's threshold (1.00%)
+| |       |           |   | |     
+| |       |           |   | ->00.00% (118,496B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |           |   | 
+| |       |           |   ->01.05% (40,823,432B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | ->01.05% (40,705,832B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |           |   | | ->01.05% (40,705,832B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |           |   | |   ->01.05% (40,705,832B) in 3 places, all below massif's threshold (1.00%)
+| |       |           |   | |     
+| |       |           |   | ->00.00% (117,600B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |           |   | 
+| |       |           |   ->00.06% (2,282,760B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |           |   
+| |       |           ->00.00% (70,608B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |           
+| |       ->04.12% (160,000,008B) 0x470CF5: parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>::sequence<ANN<10, vertex<point3d<double>, 10> >(parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int, parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int)::{lambda(unsigned long)
+| |         ->04.12% (160,000,008B) 0x447D3D: parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false> parlay::sequence<vertex<point3d<double>, 10>*, std::allocator<vertex<point3d<double>, 10>*>, false>::from_function<ANN<10, vertex<point3d<double>, 10> >(parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int, parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int)::{lambda(unsigned long)
+| |           ->04.12% (160,000,008B) 0x427CD8: auto parlay::internal::tabulate<ANN<10, vertex<point3d<double>, 10> >(parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int, parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int)::{lambda(unsigned long)
+| |             ->04.12% (160,000,008B) 0x42AAB7: void ANN<10, vertex<point3d<double>, 10> >(parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int, parlay::sequence<vertex<point3d<double>, 10>, std::allocator<vertex<point3d<double>, 10> >, std::is_same<vertex<point3d<double>, 10>, char>::value>&, int, int) (neighbors.h:68)
+| |               ->04.12% (160,000,008B) 0x40E6C8: void timeNeighbors<10, point3d<double> >(parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int, char*, parlay::sequence<point3d<double>, std::allocator<point3d<double> >, std::is_same<point3d<double>, char>::value>&, int, int) (neighborsTime.C:73)
+| |                 ->04.12% (160,000,008B) 0x40454E: main (neighborsTime.C:150)
+| |                   
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->08.13% (315,551,712B) 0x408172: parlay::block_allocator::allocate_blocks(unsigned long) (block_allocator.h:86)
+| ->08.12% (315,289,408B) 0x4082D2: parlay::block_allocator::get_list() (block_allocator.h:101)
+| | ->08.12% (315,289,408B) 0x408B76: parlay::block_allocator::alloc() (block_allocator.h:193)
+| |   ->08.12% (315,289,408B) 0x5056C3: parlay::type_allocator<oct_tree<vertex<point3d<double>, 10> >::node>::alloc() (alloc.h:323)
+| |     ->08.12% (315,289,408B) 0x4EB69E: oct_tree<vertex<point3d<double>, 10> >::node::alloc_node() (oct_tree.h:664)
+| |       ->04.12% (159,743,136B) 0x4C6EEB: oct_tree<vertex<point3d<double>, 10> >::node::new_leaf(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:228)
+| |       | ->04.12% (159,743,136B) 0x49E625: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:628)
+| |       |   ->02.14% (82,888,064B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |   | ->02.14% (82,888,064B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |   |   ->02.14% (82,888,064B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |   |     ->01.08% (41,968,640B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |   |     | ->01.07% (41,444,032B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |   |     | | ->01.07% (41,444,032B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |   |     | |   ->01.07% (41,444,032B) in 3 places, all below massif's threshold (1.00%)
+| |       |   |     | |     
+| |       |   |     | ->00.01% (524,608B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |   |     | 
+| |       |   |     ->01.00% (38,820,992B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |   |     | ->01.00% (38,820,992B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |   |     |   ->01.00% (38,820,992B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |   |     |     ->01.00% (38,820,992B) in 3 places, all below massif's threshold (1.00%)
+| |       |   |     |       
+| |       |   |     ->00.05% (2,098,432B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |   |     
+| |       |   ->01.98% (76,855,072B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |     ->01.98% (76,855,072B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |       ->01.98% (76,855,072B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |         ->01.00% (38,820,992B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         | ->01.00% (38,820,992B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |       |         |   ->01.00% (38,820,992B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |       |         |     ->01.00% (38,820,992B) in 3 places, all below massif's threshold (1.00%)
+| |       |         |       
+| |       |         ->00.98% (38,034,080B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       |         
+| |       ->04.01% (155,546,272B) 0x4C7051: oct_tree<vertex<point3d<double>, 10> >::node::new_node(oct_tree<vertex<point3d<double>, 10> >::node*, oct_tree<vertex<point3d<double>, 10> >::node*, int) (oct_tree.h:234)
+| |         ->04.01% (155,546,272B) 0x49E7F0: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:650)
+| |           ->01.98% (76,855,072B) 0x49E523: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |           | ->01.82% (70,559,776B) 0x40634F: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |           | | ->01.82% (70,559,776B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |           | |   ->01.82% (70,559,776B) in 3 places, all below massif's threshold (1.00%)
+| |           | |     
+| |           | ->00.16% (6,295,296B) in 1+ places, all below ms_print's threshold (01.00%)
+| |           | 
+| |           ->01.93% (75,018,944B) 0x49E598: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |           | ->01.78% (68,985,952B) 0x40635B: void parlay::par_do_if<oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int)::{lambda()
+| |           | | ->01.78% (68,985,952B) 0x49E7CD: oct_tree<vertex<point3d<double>, 10> >::build_recursive(parlay::slice<std::pair<unsigned long, vertex<point3d<double>, 10>*>*, std::pair<unsigned long, vertex<point3d<double>, 10>*>*>, int) (oct_tree.h:647)
+| |           | |   ->01.78% (68,985,952B) in 3 places, all below massif's threshold (1.00%)
+| |           | |     
+| |           | ->00.16% (6,032,992B) in 1+ places, all below ms_print's threshold (01.00%)
+| |           | 
+| |           ->00.09% (3,672,256B) in 1+ places, all below ms_print's threshold (01.00%)
+| |           
+| ->00.01% (262,304B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->00.00% (106,227B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 36 10,147,602,104    3,561,363,096    3,532,238,763    29,124,333            0
+ 37 10,307,604,096    3,721,365,088    3,692,238,771    29,126,317            0
+ 38 10,467,606,088    3,561,363,096    3,532,238,763    29,124,333            0
+ 39 10,549,592,608    3,479,392,688    3,454,811,779    24,580,909            0
+ 40 10,638,436,144    3,390,566,800    3,370,865,131    19,701,669            0
+ 41 10,732,839,088    3,296,182,880    3,281,704,987    14,477,893            0
+ 42 10,829,972,640    3,199,068,480    3,189,944,331     9,124,149            0
+ 43 10,930,295,520    3,098,765,008    3,095,101,035     3,663,973            0
+ 44 10,993,167,656    3,035,905,272    3,035,686,763       218,509            0
+ 45 11,153,169,648    2,875,903,280    2,875,686,755       216,525            0
+ 46 11,153,169,688    2,875,903,240    2,875,686,747       216,493            0
+ 47 13,713,173,728      315,899,200      315,686,739       212,461            0
+ 48 13,869,064,768      160,008,160      159,877,994       130,166            0
+ 49 14,028,995,104           77,824           77,474           350            0
+ 50 14,028,995,144           77,784           77,450           334            0
+ 51 14,028,995,200           77,728           77,426           302            0
+ 52 14,028,995,240           77,688           77,402           286            0
+ 53 14,028,995,280           77,648           77,378           270            0
+ 54 14,028,995,320           77,608           77,354           254            0
+ 55 14,028,995,360           77,568           77,330           238            0
+ 56 14,028,995,400           77,528           77,306           222            0
+ 57 14,028,995,440           77,488           77,282           206            0
+99.73% (77,282B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->93.83% (72,704B) 0x50F5C19: pool (eh_alloc.cc:123)
+| ->93.83% (72,704B) 0x50F5C19: UnknownInlinedFun (eh_alloc.cc:262)
+|   ->93.83% (72,704B) 0x50F5C19: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:338)
+|     ->93.83% (72,704B) 0x4009119: call_init.part.0 (dl-init.c:72)
+|       ->93.83% (72,704B) 0x4009219: call_init (dl-init.c:118)
+|         ->93.83% (72,704B) 0x4009219: _dl_init (dl-init.c:119)
+|           ->93.83% (72,704B) 0x401EE19: ??? (in /usr/lib64/ld-2.28.so)
+|             ->93.83% (72,704B) 0xC: ???
+|               ->93.83% (72,704B) 0x1FFEFFFBF6: ???
+|                 ->93.83% (72,704B) 0x1FFEFFFC08: ???
+|                   ->93.83% (72,704B) 0x1FFEFFFC0B: ???
+|                     ->93.83% (72,704B) 0x1FFEFFFC3F: ???
+|                       ->93.83% (72,704B) 0x1FFEFFFC42: ???
+|                         ->93.83% (72,704B) 0x1FFEFFFC44: ???
+|                           ->93.83% (72,704B) 0x1FFEFFFC47: ???
+|                             ->93.83% (72,704B) 0x1FFEFFFC4A: ???
+|                               ->93.83% (72,704B) 0x1FFEFFFC4D: ???
+|                                 ->93.83% (72,704B) 0x1FFEFFFC4F: ???
+|                                   ->93.83% (72,704B) 0x1FFEFFFC52: ???
+|                                     ->93.83% (72,704B) 0x1FFEFFFC54: ???
+|                                       ->93.83% (72,704B) 0x1FFEFFFC57: ???
+|                                         
+->05.29% (4,096B) 0x5A1778F: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.29% (4,096B) 0x5A256FF: _IO_doallocbuf (genops.c:347)
+|   ->05.29% (4,096B) 0x5A24967: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:749)
+|     ->05.29% (4,096B) 0x5A23B0E: UnknownInlinedFun (fileops.c:1248)
+|       ->05.29% (4,096B) 0x5A23B0E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1201)
+|         ->05.29% (4,096B) 0x5A18BFB: fwrite (iofwrite.c:39)
+|           ->05.29% (4,096B) 0x517ECC3: sputn (streambuf:458)
+|             ->05.29% (4,096B) 0x517ECC3: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+|               ->05.29% (4,096B) 0x517ECC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+|                 ->05.29% (4,096B) 0x403E95: main (neighborsTime.C:104)
+|                   
+->00.62% (482B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 58 14,028,995,480           77,448           77,258           190            0
+ 59 14,028,995,520           77,408           77,234           174            0
+ 60 14,028,995,560           77,368           77,210           158            0
+ 61 14,028,995,616           77,312           77,186           126            0
+ 62 14,028,995,656           77,272           77,162           110            0
+ 63 14,028,996,032           76,896           76,842            54            0
+ 64 14,028,996,072           76,856           76,821            35            0
+ 65 14,028,996,112           76,816           76,800            16            0
+ 66 14,029,068,824            4,104            4,096             8            0
+ 67 14,029,072,928                0                0             0            0
+00.00% (0B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
