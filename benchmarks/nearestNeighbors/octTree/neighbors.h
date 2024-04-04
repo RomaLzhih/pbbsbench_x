@@ -373,9 +373,16 @@ void ANN(parlay::sequence<vtx> &v, int k, int rounds,
               bd = T.get_box_delta(dims);
             },
             [&]() {
+              LOG << "--------------------------------------------" << ENDL;
+              parlay::internal::timer t;
+              t.start();
               v2 = parlay::tabulate(sz,
                                     [&](size_t i) -> vtx * { return &v[i]; });
+              t.next("get address");
               T.batch_delete(v2, root, bd.first, bd.second);
+              t.next("finish delete");
+              t.stop();
+              LOG << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" << ENDL;
             },
             [&]() { T.tree.reset(); });
         std::cout << aveDelete << " " << std::flush;
