@@ -64,7 +64,7 @@ void ANN(parlay::sequence<vtx> &v, int k, int rounds, parlay::sequence<vtx> &vin
 
         parlay::sequence<vtx *> v2, vin2, allv;
 
-        // return;
+        return;
         v2 = parlay::tabulate(n, [&](size_t i) -> vtx * { return &v[i]; });
         box whole_box = knn_tree::o_tree::get_box(v2);
         knn_tree T = knn_tree(v2, whole_box);

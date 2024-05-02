@@ -22,6 +22,7 @@
 
 #include <algorithm>
 #include <iostream>
+#include <string>
 
 #include "../benchmarks/nearestNeighbors/octTree/neighbors.h"
 #include "common/IO.h"
@@ -29,6 +30,7 @@
 #include "parlay/parallel.h"
 #include "parlay/primitives.h"
 #include "parlay/random.h"
+#include "parlay/slice.h"
 using namespace benchIO;
 
 // *************************************************************
@@ -74,11 +76,29 @@ void timeNeighbors(parlay::sequence<point> &pts, int k, int rounds, char *outFil
 
 template<class Point>
 parlay::sequence<Point> readGeneral(char const *fname) {
-    parlay::sequence<char> S = readStringFromFile(fname);
-    parlay::sequence<char *> W = stringToWords(S);
-    int d = Point::dim;
+    // parlay::sequence<char> S = readStringFromFile(fname);
+    // parlay::sequence<char *> W = stringToWords(S);
+    // int d = Point::dim;
     //  std::cout << W.size() << std::endl;
-    return parsePoints<Point>(W.cut(2, W.size()));
+    // return parsePoints<Point>(W.cut(2, W.size()));
+
+    ifstream fs;
+    fs.open(fname);
+    size_t N;
+    int Dim;
+    string str;
+    fs >> str, N = stol(str);
+    fs >> str, Dim = stoi(str);
+    parlay::sequence<Point> wp(N);
+    for (size_t i = 0; i < N; i++) {
+        std::array<double, 3> arr;
+        for (int j = 0; j < Dim; j++) {
+            fs >> str;
+            arr[j] = std::stol(str);
+        }
+        wp[i] = Point(arr[0], arr[1], arr[2]);
+    }
+    return wp;
 }
 
 int main(int argc, char *argv[]) {
@@ -101,28 +121,28 @@ int main(int argc, char *argv[]) {
     name = name.substr(name.rfind("/") + 1);
     std::cout << name << " ";
 
-    if (d == 2) {
-        parlay::sequence<point2> PIn = readGeneral<point2>(iFile);
-        parlay::sequence<point2> PInsert;
-        // parlay::sequence<point2> PIn = readPointsFromFile<point2>( iFile );
-        if (readInsertFile == 1) {
-            std::string insertFile;
-            int id = std::stoi(name.substr(0, name.find_first_of('.')));
-            id = (id + 1) % 3;  //! MOD graph number used to test
-            if (!id) id++;
-            int pos = std::string(iFile).rfind("/") + 1;
-            insertFile = std::string(iFile).substr(0, pos) + std::to_string(id) + ".in";
-            PInsert = readGeneral<point2>(insertFile.c_str());
-        }
-
-        if (k == 1) {
-            timeNeighbors<1>(PIn, k, rounds, oFile, PInsert, tag, queryType);
-        } else if (k == 10) {
-            timeNeighbors<10>(PIn, k, rounds, oFile, PInsert, tag, queryType);
-        } else {
-            timeNeighbors<100>(PIn, k, rounds, oFile, PInsert, tag, queryType);
-        }
-    }
+    // if (d == 2) {
+    //     parlay::sequence<point2> PIn = readGeneral<point2>(iFile);
+    //     parlay::sequence<point2> PInsert;
+    //     // parlay::sequence<point2> PIn = readPointsFromFile<point2>( iFile );
+    //     if (readInsertFile == 1) {
+    //         std::string insertFile;
+    //         int id = std::stoi(name.substr(0, name.find_first_of('.')));
+    //         id = (id + 1) % 3;  //! MOD graph number used to test
+    //         if (!id) id++;
+    //         int pos = std::string(iFile).rfind("/") + 1;
+    //         insertFile = std::string(iFile).substr(0, pos) + std::to_string(id) + ".in";
+    //         PInsert = readGeneral<point2>(insertFile.c_str());
+    //     }
+    //
+    //     if (k == 1) {
+    //         timeNeighbors<1>(PIn, k, rounds, oFile, PInsert, tag, queryType);
+    //     } else if (k == 10) {
+    //         timeNeighbors<10>(PIn, k, rounds, oFile, PInsert, tag, queryType);
+    //     } else {
+    //         timeNeighbors<100>(PIn, k, rounds, oFile, PInsert, tag, queryType);
+    //     }
+    // }
 
     if (d == 3) {
         parlay::sequence<point3> PIn = readGeneral<point3>(iFile);
