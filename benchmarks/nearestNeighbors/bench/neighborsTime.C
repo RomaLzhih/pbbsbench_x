@@ -56,13 +56,36 @@ struct vertex {
 //  TIMING
 // *************************************************************
 
+template<class Point, class vtx>
+void readGeneral(char const *fname, parlay::sequence<vtx> &wp) {
+
+    ifstream fs;
+    fs.open(fname);
+    size_t N;
+    int Dim;
+    string str;
+    fs >> str, N = stol(str);
+    fs >> str, Dim = stoi(str);
+    wp.resize(N, vtx(Point(), 0));
+    size_t id = 0;
+    for (size_t i = 0; i < N; i++) {
+        std::array<double, 3> arr;
+        for (int j = 0; j < Dim; j++) {
+            fs >> str;
+            arr[j] = std::stol(str);
+        }
+        wp[i] = vtx(Point(arr[0], arr[1], arr[2]), id++);
+    }
+    return;
+}
+
 template<int maxK, class point>
 void timeNeighbors(parlay::sequence<point> &pts, int k, int rounds, char *outFile, parlay::sequence<point> &pin,
-                   int tag, int queryType) {
-    size_t n = pts.size();
+                   int tag, int queryType, char *iFile) {
     using vtx = vertex<point, maxK>;
-    int dimensions = pts[0].dimension();
-    auto vv = parlay::tabulate(n, [&](size_t i) -> vtx { return vtx(pts[i], i); });
+    parlay::sequence<vtx> vv;
+    readGeneral<point, vtx>(iFile, vv);
+    // auto vv = parlay::tabulate(n, [&](size_t i) -> vtx { return vtx(pts[i], i); });
     pts.clear();
     parlay::sequence<point>().swap(pts);
 
@@ -72,33 +95,6 @@ void timeNeighbors(parlay::sequence<point> &pts, int k, int rounds, char *outFil
     parlay::sequence<point>().swap(pin);
 
     ANN<maxK>(vv, k, rounds, pin2, tag, queryType);
-}
-
-template<class Point>
-parlay::sequence<Point> readGeneral(char const *fname) {
-    // parlay::sequence<char> S = readStringFromFile(fname);
-    // parlay::sequence<char *> W = stringToWords(S);
-    // int d = Point::dim;
-    //  std::cout << W.size() << std::endl;
-    // return parsePoints<Point>(W.cut(2, W.size()));
-
-    ifstream fs;
-    fs.open(fname);
-    size_t N;
-    int Dim;
-    string str;
-    fs >> str, N = stol(str);
-    fs >> str, Dim = stoi(str);
-    parlay::sequence<Point> wp(N);
-    for (size_t i = 0; i < N; i++) {
-        std::array<double, 3> arr;
-        for (int j = 0; j < Dim; j++) {
-            fs >> str;
-            arr[j] = std::stol(str);
-        }
-        wp[i] = Point(arr[0], arr[1], arr[2]);
-    }
-    return wp;
 }
 
 int main(int argc, char *argv[]) {
@@ -145,24 +141,11 @@ int main(int argc, char *argv[]) {
     // }
 
     if (d == 3) {
-        parlay::sequence<point3> PIn = readGeneral<point3>(iFile);
+        // parlay::sequence<point3> PIn = readGeneral<point3>(iFile);
+        parlay::sequence<point3> PIn;
         parlay::sequence<point3> PInsert;
         // parlay::sequence<point3> PIn = readPointsFromFile<point3>( iFile );
-        if (readInsertFile == 1) {
-            std::string insertFile;
-            int id = std::stoi(name.substr(0, name.find_first_of('.')));
-            id = (id + 1) % 3;  //! MOD graph number used to test
-            if (!id) id++;
-            int pos = std::string(iFile).rfind("/") + 1;
-            insertFile = std::string(iFile).substr(0, pos) + std::to_string(id) + ".in";
-            PInsert = readGeneral<point3>(insertFile.c_str());
-        }
 
-        if (k == 1)
-            timeNeighbors<1>(PIn, k, rounds, oFile, PInsert, tag, queryType);
-        else if (k == 10)
-            timeNeighbors<10>(PIn, k, rounds, oFile, PInsert, tag, queryType);
-        else
-            timeNeighbors<100>(PIn, k, rounds, oFile, PInsert, tag, queryType);
+        timeNeighbors<1>(PIn, k, rounds, oFile, PInsert, tag, queryType, iFile);
     }
 }
